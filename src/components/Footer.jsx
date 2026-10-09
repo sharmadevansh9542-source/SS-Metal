@@ -1,5 +1,6 @@
 import Link from "next/link";
 import siteConfig from "../data/siteConfig";
+import { productMenu } from "../data/products";
 
 export default function Footer() {
   return (
@@ -32,21 +33,20 @@ export default function Footer() {
         <div className="footer-products">
           <h3>Product Range</h3>
           <div className="footer-product-links">
-            <Link href="/products">All Products</Link>
-            <Link href="/products/stainless-steel-kitchenware">Kitchenware</Link>
-            <Link href="/products/cookware">Cookware</Link>
-            <Link href="/products/barware">Barware</Link>
-            <Link href="/products/bath-accessories">Bath Accessories</Link>
-            <Link href="/products/unfinished-kalvat-utensils">Unfinished / Kalvat</Link>
-            <Link href="/products/ss-coil">SS Coil</Link>
-            <Link href="/products/ss-sheet">SS Sheet</Link>
-            <Link href="/products/ss-circle">SS Circle</Link>
-            <Link href="/products/ss-blank">SS Blank</Link>
-            <Link href="/products/ss-utensils">SS Utensils</Link>
-            <Link href="/products/ss-farma-design">SS Farma Design</Link>
-            <Link href="/products/ss-wire">SS Wire</Link>
-            <Link href="/products/ss-rod">SS Rod</Link>
-            <Link href="/products/ss-pipe">SS Pipe</Link>
+            {productMenu.map(group => {
+              if (!group.items || group.items.length === 0) {
+                return (
+                  <Link key={group.href} href={group.href}>
+                    {group.title}
+                  </Link>
+                );
+              }
+              return group.items.map(subItem => (
+                <Link key={subItem.href} href={subItem.href}>
+                  {subItem.label}
+                </Link>
+              ));
+            })}
           </div>
         </div>
         <div className="footer-contact">

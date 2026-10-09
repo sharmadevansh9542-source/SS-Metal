@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import siteConfig from "../data/siteConfig";
+import { productMenu } from "../data/products";
 
 export default function EnquiryForm() {
   const [status, setStatus] = useState("");
@@ -10,8 +10,14 @@ export default function EnquiryForm() {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const prod = params.get("product");
+      const groupParam = params.get("group");
       if (prod) {
         setSelectedProduct(prod);
+      } else if (groupParam) {
+        const foundGroup = productMenu.find(g => g.title.toLowerCase() === groupParam.toLowerCase() || g.slug === groupParam);
+        if (foundGroup && foundGroup.items.length > 0) {
+          setSelectedProduct(foundGroup.items[0].label);
+        }
       }
     }
   }, []);
@@ -24,8 +30,7 @@ export default function EnquiryForm() {
     form.reset();
   }
 
-  const productNav = siteConfig.navigation.find(item => item.label === "Products");
-  const groups = productNav?.groups || [];
+  const groupsWithItems = productMenu.filter(group => group.items && group.items.length > 0);
 
   return (
     <form className="enquiry-form" onSubmit={submit}>
@@ -57,15 +62,13 @@ export default function EnquiryForm() {
           onChange={(e) => setSelectedProduct(e.target.value)}
         >
           <option value="" disabled>Select a product range</option>
-          {groups.map(group => (
-            <optgroup key={group.heading} label={group.heading}>
-              {group.items
-                .filter(item => item.href !== "/products")
-                .map(item => (
-                  <option key={item.label} value={item.label}>
-                    {item.label}
-                  </option>
-                ))}
+          {groupsWithItems.map(group => (
+            <optgroup key={group.slug} label={group.title}>
+              {group.items.map(item => (
+                <option key={item.label} value={item.label}>
+                  {item.label}
+                </option>
+              ))}
             </optgroup>
           ))}
           <option value="Other / custom requirement">Other / custom requirement</option>

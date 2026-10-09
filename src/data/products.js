@@ -1,3 +1,58 @@
+export const productMenu = [
+  {
+    title: "All Products",
+    slug: "all-products",
+    href: "/products",
+    items: []
+  },
+  {
+    title: "Finished Products",
+    slug: "finished-products",
+    href: "/products/finished-products",
+    description: "Stainless steel kitchenware, cookware, barware, bath accessories and unfinished utensils for trade and distribution.",
+    items: [
+      { label: "Kitchenware", slug: "stainless-steel-kitchenware", href: "/products/stainless-steel-kitchenware" },
+      { label: "Cookware", slug: "cookware", href: "/products/cookware" },
+      { label: "Barware", slug: "barware", href: "/products/barware" },
+      { label: "Bath Accessories", slug: "bath-accessories", href: "/products/bath-accessories" },
+      { label: "Unfinished / Kalvat", slug: "unfinished-kalvat-utensils", href: "/products/unfinished-kalvat-utensils" }
+    ]
+  },
+  {
+    title: "Raw Material",
+    slug: "raw-material",
+    href: "/products/raw-material",
+    description: "High-grade stainless steel coils and sheets supplied for industrial forming and fabrication. Grade, thickness and size available on request.",
+    items: [
+      { label: "SS Coil", slug: "ss-coil", href: "/products/ss-coil" },
+      { label: "SS Sheet", slug: "ss-sheet", href: "/products/ss-sheet" }
+    ]
+  },
+  {
+    title: "In-house Manufacturing",
+    slug: "in-house-manufacturing",
+    href: "/products/in-house-manufacturing",
+    description: "Precision-cut circles, blanks, fabricated utensils and custom farma tooling produced in-house. Grade, thickness and size available on request.",
+    items: [
+      { label: "SS Circle", slug: "ss-circle", href: "/products/ss-circle" },
+      { label: "SS Blank", slug: "ss-blank", href: "/products/ss-blank" },
+      { label: "SS Utensils", slug: "ss-utensils", href: "/products/ss-utensils" },
+      { label: "SS Farma Design", slug: "ss-farma-design", href: "/products/ss-farma-design" }
+    ]
+  },
+  {
+    title: "Trade & Cutting",
+    slug: "trade-and-cutting",
+    href: "/products/trade-and-cutting",
+    description: "Stainless steel wires, solid rods and commercial pipes cut to size for trade and engineering applications. Grade, thickness and size available on request.",
+    items: [
+      { label: "SS Wire", slug: "ss-wire", href: "/products/ss-wire" },
+      { label: "SS Rod", slug: "ss-rod", href: "/products/ss-rod" },
+      { label: "SS Pipe", slug: "ss-pipe", href: "/products/ss-pipe" }
+    ]
+  }
+];
+
 const products = [
   {
     slug: "stainless-steel-kitchenware",
