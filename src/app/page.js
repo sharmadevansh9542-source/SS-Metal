@@ -38,7 +38,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-stamp">
-            <span>SMI</span>
+            <span>SS-M</span>
             <small>
               STAINLESS<br />STEELWARE
             </small>
