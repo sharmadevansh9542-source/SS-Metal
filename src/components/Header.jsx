@@ -204,7 +204,7 @@ export default function Header() {
             </span>
           </div>
           <div className="top-actions">
-            <Link href="/products" className="badge-stock-alert">
+            <Link href="/ready-stock" className="badge-stock-alert">
               <span>⚡</span> Live Ready Stock Available
             </Link>
             <Link href="/contact" className="top-item top-pdf-btn">
@@ -403,9 +403,10 @@ export default function Header() {
             }
 
             const isActive = pathname === item.href;
+            const isReadyStock = item.href === "/ready-stock";
             return (
               <Link
-                className={`nav-link ${isActive ? "is-active active" : ""}`}
+                className={`nav-link ${isActive ? "is-active active" : ""} ${isReadyStock ? "nav-ready-stock-pill" : ""}`}
                 key={item.href}
                 href={item.href}
                 onClick={closeAll}

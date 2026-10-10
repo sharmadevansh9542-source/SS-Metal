@@ -24,7 +24,7 @@ const siteConfig = {
       href: "/products",
       menu: productMenu
     },
-    { label: "Ready Stock", href: "/products" },
+    { label: "Ready Stock", href: "/ready-stock" },
     { label: "Infrastructure", href: "/manufacturing" },
     { label: "Enquiry & Contact", href: "/contact" }
   ]

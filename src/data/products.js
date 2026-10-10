@@ -56,7 +56,7 @@ const products = [
     title: "SS Sheet",
     short: "Flat stainless steel sheets cut to standard and custom sizes.",
     description: "Stainless steel sheets suitable for fabrication, utensil production, and engineering works. Grade, thickness and size available on request.",
-    image: "/images/ss-sheet.svg",
+    image: "/images/ss-sheet.jpg",
     eyebrow: "Raw Material",
     group: "Raw Material",
     items: ["Standard & cut-to-length sheets", "Commercial & industrial finishes", "Grade, thickness and size available on request", "Custom order quantities"]
@@ -66,7 +66,7 @@ const products = [
     title: "SS Circle",
     short: "Precision-cut circles for spinning and utensil pressing.",
     description: "Circles cut in-house with uniform edges and consistent material thickness, ideal for utensil drawing and vessel pressing. Grade, thickness and size available on request.",
-    image: "/images/ss-circle.svg",
+    image: "/images/ss-circle.jpg",
     eyebrow: "In-house Manufacturing",
     group: "In-house Manufacturing",
     items: ["Deep drawing quality circles", "Smooth trimmed edges", "Grade, thickness and size available on request", "Bulk manufacturing lots"]
@@ -86,7 +86,7 @@ const products = [
     title: "SS Utensils",
     short: "In-house fabricated stainless steel utensils for trade distribution.",
     description: "Sturdy, reliably manufactured stainless steel utensils formed in our facility. Grade, thickness and size available on request.",
-    image: "/images/ss-utensils.svg",
+    image: "/images/ss-utensils.jpg",
     eyebrow: "In-house Manufacturing",
     group: "In-house Manufacturing",
     items: ["Daily utility utensils", "Commercial serving pieces", "Grade, thickness and size available on request", "Custom bulk packaging"]
@@ -96,7 +96,7 @@ const products = [
     title: "SS Farma Design",
     short: "Custom patterned and shaped farma designs for specialized metal fabrication.",
     description: "Specialized farma design tooling and shaped metal templates produced in-house for traditional and modern metal forming. Grade, thickness and size available on request.",
-    image: "/images/ss-farma-design.svg",
+    image: "/images/ss-farma-design.jpg",
     eyebrow: "In-house Manufacturing",
     group: "In-house Manufacturing",
     items: ["Custom Farma patterns", "Forming dies & templates", "Grade, thickness and size available on request", "Tailored tooling enquiries"]
@@ -106,7 +106,7 @@ const products = [
     title: "SS Wire",
     short: "Drawn and cut stainless steel wire in various tempers and gauges.",
     description: "Stainless steel wire supplied for spring making, kitchen baskets, mesh, and structural applications. Grade, thickness and size available on request.",
-    image: "/images/ss-wire.svg",
+    image: "/images/ss-wire.jpg",
     eyebrow: "Trade & Cutting",
     group: "Trade & Cutting",
     items: ["Bright & annealed wire coils", "Cut length straight wires", "Grade, thickness and size available on request", "Trade & coil supply"]
@@ -116,7 +116,7 @@ const products = [
     title: "SS Rod",
     short: "Solid round and hex stainless steel rods cut to requirement.",
     description: "High-tensile stainless steel rods for machining, fabrication, shafting, and hardware production. Grade, thickness and size available on request.",
-    image: "/images/ss-rod.svg",
+    image: "/images/ss-rod.jpg",
     eyebrow: "Trade & Cutting",
     group: "Trade & Cutting",
     items: ["Round, hex & square bar stock", "Cut-to-size trade lots", "Grade, thickness and size available on request", "Commercial enquiry support"]

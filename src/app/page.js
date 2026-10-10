@@ -1,6 +1,7 @@
 import Link from "next/link";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
+import PopularKalvatSection from "../components/PopularKalvatSection";
 import { ArrowRight } from "../components/Icons";
 import siteConfig from "../data/siteConfig";
 
@@ -84,7 +85,7 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <Link href="/products" className="btn btn-accent">
+            <Link href="/ready-stock" className="btn btn-accent">
               <span>Browse Ready Stock Table</span> <span>→</span>
             </Link>
           </div>
@@ -189,6 +190,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Popular Unfinished Kalvat Products Section */}
+      <PopularKalvatSection />
 
       {/* Product Categories Section */}
       <section className="featured-categories-section">

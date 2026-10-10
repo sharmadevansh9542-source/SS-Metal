@@ -1,5 +1,6 @@
 import PageHero from "../../components/PageHero";
 import ProductCatalogList from "../../components/ProductCatalogList";
+import ReadyStockTable from "../../components/ReadyStockTable";
 import products from "../../data/products";
 
 export const metadata = { title: "Products" };
@@ -24,6 +25,13 @@ export default function ProductsPage() {
             </p>
           </div>
           <ProductCatalogList products={products} />
+        </div>
+      </section>
+
+      {/* Ready Stock Live Section */}
+      <section className="ready-stock-section" style={{ background: "#f8fafc", padding: "70px 0", borderTop: "1px solid #e2e8f0" }}>
+        <div className="container">
+          <ReadyStockTable showHeader={true} />
         </div>
       </section>
     </>

@@ -29,7 +29,7 @@ export default function Footer() {
               <li><Link href="/">› Home</Link></li>
               <li><Link href="/about">› Company Profile</Link></li>
               <li><Link href="/products">› Products Catalogue</Link></li>
-              <li><Link href="/products">› Ready Stock Inventory</Link></li>
+              <li><Link href="/ready-stock">› Ready Stock Inventory</Link></li>
               <li><Link href="/manufacturing">› Infrastructure & Plant</Link></li>
               <li><Link href="/contact">› Contact & Enquiry</Link></li>
             </ul>

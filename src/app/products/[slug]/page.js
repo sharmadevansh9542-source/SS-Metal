@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import products, { productMenu } from "../../../data/products";
 import PageHero from "../../../components/PageHero";
 import ProductCard from "../../../components/ProductCard";
+import KalvatCatalogueList from "../../../components/KalvatCatalogueList";
 import { ArrowRight } from "../../../components/Icons";
 
 export function generateStaticParams() {
@@ -18,6 +19,12 @@ export async function generateMetadata({ params }) {
   if (group) return { title: group.title };
 
   const product = products.find(p => p.slug === params.slug);
+  if (product && product.slug === "ss-utensils") {
+    return {
+      title: "SS Utensils - Unfinished Kalvat Products Catalogue | SS Metal Industries",
+      description: "Unfinished Kalvat utensils, tapers, mugs, jugs, pots, cutlery holders, ice buckets, barware and bathware manufactured in Moradabad."
+    };
+  }
   return { title: product ? product.title : "Product" };
 }
 
@@ -86,6 +93,73 @@ export default function ProductDetailPage({ params }) {
   const sameGroup = products.filter(p => p.group === product.group && p.slug !== product.slug);
   const otherGroups = products.filter(p => p.group !== product.group && p.slug !== product.slug);
   const related = [...sameGroup, ...otherGroups].slice(0, 3);
+
+  // Special case: SS Utensils renders the full Unfinished Kalvat Products Catalogue
+  if (product.slug === "ss-utensils") {
+    return (
+      <>
+        {/* Unfinished Kalvat Products Catalogue Section (Matches Screenshot 1) */}
+        <section className="kalvat-catalogue-page-wrapper section-pad">
+          <div className="container">
+            <KalvatCatalogueList showHeader={true} />
+          </div>
+        </section>
+
+        {/* Manufacturing Highlights & Technical Overview */}
+        <section className="section-pad section-soft">
+          <div className="container product-detail-grid">
+            <div className="product-detail-visual">
+              <img src={product.image} alt="In-house Unfinished Utensils Manufacturing" />
+              <span>IN-HOUSE MANUFACTURING</span>
+            </div>
+            <div className="product-detail-copy">
+              <p className="eyebrow">Moradabad Manufacturing Unit</p>
+              <h2>Precision Pressing &amp; <em>Deep Drawn Kalvat.</em></h2>
+              <p>{product.description}</p>
+              <h3>Capabilities &amp; Bulk Enquiries</h3>
+              <ul className="item-list">
+                {product.items.map(item => (
+                  <li key={item}>
+                    <span>+</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="small-note">
+                Manufactured from premium JSLU, J4, 304, 316, 410, and 430 grade stainless steel coils. Custom dies, weights, and gauges available on request for export and domestic utensil manufacturers.
+              </p>
+              <Link
+                className="button button-copper"
+                href={`/contact?product=${encodeURIComponent(product.title)}`}
+              >
+                Discuss Custom Kalvat Production <ArrowRight />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related In-House Manufacturing Categories */}
+        <section className="section-pad">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">In-House Manufacturing</p>
+                <h2>Other <em>manufacturing categories.</em></h2>
+              </div>
+              <Link className="text-link" href="/products/in-house-manufacturing">
+                View all in-house <ArrowRight />
+              </Link>
+            </div>
+            <div className="product-grid related-grid">
+              {related.map((p, i) => (
+                <ProductCard key={p.slug} product={p} index={i} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>

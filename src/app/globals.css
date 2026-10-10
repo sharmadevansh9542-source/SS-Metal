@@ -3687,3 +3687,932 @@ p {
         animation: none !important;
     }
 }
+
+
+/* ============================================================
+   READY STOCK NAVBAR PILL & INVENTORY SECTION
+============================================================ */
+
+.nav-ready-stock-pill {
+    background: #e0f2fe !important;
+    color: #0369a1 !important;
+    font-weight: 700 !important;
+    padding: 7px 15px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.nav-ready-stock-pill:hover {
+    background: #bae6fd !important;
+    color: #0284c7 !important;
+}
+
+.nav-ready-stock-pill.is-active,
+.nav-ready-stock-pill.active {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+}
+
+.ready-stock-page-wrapper {
+    background: #f8fafc;
+    min-height: 75vh;
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+.ready-stock-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.ready-stock-header-block {
+    margin-bottom: 24px;
+}
+
+.ready-stock-main-heading {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(2.1rem, 3.8vw, 2.85rem);
+    font-weight: 800;
+    color: #0b2540;
+    line-height: 1.15;
+    margin: 0 0 10px;
+    letter-spacing: -0.035em;
+}
+
+.ready-stock-main-description {
+    font-size: 15.5px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 24px;
+    max-width: 860px;
+}
+
+/* Toolbar: Filters & Search */
+.ready-stock-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.ready-stock-grade-chips {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chips-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-right: 2px;
+}
+
+.grade-chip {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.grade-chip:hover {
+    border-color: #0b2540;
+    color: #0b2540;
+    background: #f1f5f9;
+}
+
+.grade-chip.is-active {
+    background: #0b2540;
+    color: #ffffff;
+    border-color: #0b2540;
+}
+
+.ready-stock-search-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 290px;
+    max-width: 100%;
+}
+
+.ready-stock-search-wrap svg {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.ready-stock-search-input {
+    width: 100%;
+    padding: 8px 32px 8px 36px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #1e293b;
+    background: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.ready-stock-search-input:focus {
+    border-color: #0b2540;
+    box-shadow: 0 0 0 3px rgba(11, 37, 64, 0.08);
+}
+
+.clear-search-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px;
+}
+
+.clear-search-btn:hover {
+    color: #334155;
+}
+
+/* Card & Table */
+.ready-stock-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(11, 37, 64, 0.05);
+}
+
+.ready-stock-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ready-stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+    text-align: left;
+}
+
+.ready-stock-table thead {
+    background: #eef2f6;
+}
+
+.ready-stock-table th {
+    padding: 15px 22px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+    letter-spacing: 0.2px;
+}
+
+.ready-stock-table th.th-action {
+    width: 90px;
+    text-align: right;
+    padding-right: 28px;
+}
+
+.ready-stock-row {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.15s ease;
+}
+
+.ready-stock-row:last-child {
+    border-bottom: none;
+}
+
+.ready-stock-row:hover {
+    background: #f8fafc;
+}
+
+.ready-stock-table td {
+    padding: 17px 22px;
+    vertical-align: middle;
+}
+
+.td-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    display: block;
+    line-height: 1.3;
+}
+
+.item-subtitle {
+    font-size: 12px;
+    color: #94a3b8;
+    display: block;
+    margin-top: 2px;
+}
+
+.td-grade .grade-text {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.td-size .size-text {
+    font-size: 14px;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.td-quantity .quantity-text {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+}
+
+/* Status Badges */
+.td-status .stock-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.3;
+}
+
+.stock-badge.in-stock {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.stock-badge.low-stock {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.stock-badge.out-stock {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Order Link */
+.td-action {
+    text-align: right;
+    padding-right: 28px !important;
+}
+
+.order-btn-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b3a5d;
+    text-decoration: none;
+    padding: 6px 12px;
+    display: inline-block;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.order-btn-link:hover {
+    color: #d97706;
+    text-decoration: underline;
+    transform: translateX(2px);
+}
+
+.ready-stock-empty {
+    text-align: center;
+    padding: 44px 20px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Footer note & CTA inside table card */
+.ready-stock-table-footer {
+    background: #f8fafc;
+    padding: 14px 22px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-note {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+.footer-note strong {
+    color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    .ready-stock-page-wrapper {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .ready-stock-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .ready-stock-search-wrap {
+        width: 100%;
+    }
+    .ready-stock-table th,
+    .ready-stock-table td {
+        padding: 14px 16px;
+    }
+    .ready-stock-table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ============================================================
+   KALVAT UNFINISHED PRODUCTS VISUAL & SECTIONS (MATCHES SCREENSHOTS)
+============================================================ */
+
+/* Visual Box */
+.kalvat-visual-box {
+    width: 100%;
+    aspect-ratio: 1.1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbe3ec;
+    color: #475569;
+    padding: 18px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.kalvat-card:hover .kalvat-visual-box,
+.popular-kalvat-card:hover .kalvat-visual-box {
+    background: #d3deea;
+}
+
+.kalvat-icon-svg {
+    width: 68px;
+    height: 68px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: #475569;
+    transition: transform 0.2s ease;
+}
+
+.kalvat-card:hover .kalvat-icon-svg,
+.popular-kalvat-card:hover .kalvat-icon-svg {
+    transform: scale(1.05);
+}
+
+/* Homepage Popular Kalvat Section (Matches Screenshot 2) */
+.popular-kalvat-section {
+    padding: 85px 0 95px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.popular-kalvat-header {
+    margin-bottom: 36px;
+    text-align: left;
+}
+
+.popular-kalvat-title {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(2.1rem, 3.8vw, 2.75rem);
+    font-weight: 800;
+    color: #0b2540;
+    line-height: 1.18;
+    margin: 0 0 10px;
+    letter-spacing: -0.035em;
+}
+
+.popular-kalvat-subtitle {
+    font-size: 15.5px;
+    color: #556987;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.popular-kalvat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.popular-kalvat-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.popular-kalvat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(11, 37, 64, 0.09);
+    border-color: #0b4c64;
+}
+
+.popular-kalvat-card-visual {
+    background: #dbe3ec;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.popular-kalvat-card-body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.popular-kalvat-cat {
+    font-size: 11.5px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.popular-kalvat-name {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1.35;
+}
+
+.popular-kalvat-wa-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f4c64;
+    text-decoration: none;
+    margin-top: auto;
+    display: inline-block;
+    transition: color 0.15s ease;
+}
+
+.popular-kalvat-wa-link:hover {
+    color: #16a34a;
+    text-decoration: underline;
+}
+
+.popular-kalvat-footer {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.btn-view-catalogue {
+    background: #0f4c64;
+    color: #ffffff;
+    padding: 13px 34px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(15, 76, 100, 0.25);
+}
+
+.btn-view-catalogue:hover {
+    background: #093445;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 76, 100, 0.35);
+}
+
+/* Kalvat Products Catalogue Page (Matches Screenshot 1) */
+.kalvat-catalogue-page-wrapper {
+    background: #fafbfc;
+    min-height: 70vh;
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+.kalvat-catalogue-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kalvat-catalogue-header {
+    margin-bottom: 24px;
+}
+
+.kalvat-catalogue-main-title {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #0b2540;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    letter-spacing: -0.035em;
+}
+
+.kalvat-catalogue-main-desc {
+    font-size: 15.5px;
+    color: #556987;
+    line-height: 1.6;
+    margin: 0 0 24px;
+    max-width: 860px;
+}
+
+/* Toolbar: Pills & Search */
+.kalvat-catalogue-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.kalvat-category-pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.kalvat-cat-btn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.kalvat-cat-btn:hover {
+    border-color: #0b2540;
+    color: #0b2540;
+    background: #f1f5f9;
+}
+
+.kalvat-cat-btn.is-active {
+    background: #0b2540;
+    color: #ffffff;
+    border-color: #0b2540;
+}
+
+.kalvat-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    max-width: 100%;
+}
+
+.kalvat-search-box svg {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.kalvat-search-input {
+    width: 100%;
+    padding: 8px 30px 8px 36px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #1e293b;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kalvat-search-input:focus {
+    border-color: #0b2540;
+    box-shadow: 0 0 0 3px rgba(11, 37, 64, 0.08);
+}
+
+.kalvat-search-clear {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px;
+}
+
+.kalvat-count-row {
+    font-size: 12.5px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 24 Products Grid */
+.kalvat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.kalvat-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.kalvat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(11, 37, 64, 0.09);
+    border-color: #0b4c64;
+}
+
+.kalvat-card-visual {
+    background: #dbe3ec;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+}
+
+.kalvat-card-body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.kalvat-card-cat {
+    font-size: 11.5px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.kalvat-card-title {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1.35;
+}
+
+.kalvat-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.kalvat-action-quickview {
+    background: none;
+    border: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #0284c7;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.kalvat-action-quickview:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+.kalvat-action-whatsapp {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #15803d;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.kalvat-action-whatsapp:hover {
+    color: #166534;
+    text-decoration: underline;
+}
+
+.kalvat-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Quick View Modal */
+.kalvat-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 37, 64, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: fadeInModal 0.2s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.kalvat-modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 680px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: scaleModal 0.2s ease-out;
+}
+
+@keyframes scaleModal {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+}
+
+.kalvat-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.15s ease, color 0.15s ease;
+    z-index: 2;
+}
+
+.kalvat-modal-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.kalvat-modal-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+}
+
+.kalvat-modal-visual {
+    background: #dbe3ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.kalvat-modal-visual .kalvat-icon-svg {
+    width: 110px;
+    height: 110px;
+}
+
+.kalvat-modal-info {
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kalvat-modal-cat {
+    font-size: 11.5px;
+    color: #0284c7;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.kalvat-modal-title {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0b2540;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
+
+.kalvat-modal-desc {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0 0 18px;
+}
+
+.kalvat-specs-table {
+    border-top: 1px solid #e2e8f0;
+    margin-bottom: 22px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+}
+
+.spec-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.spec-val {
+    color: #1e293b;
+    font-weight: 600;
+    text-align: right;
+}
+
+.kalvat-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .popular-kalvat-grid,
+    .kalvat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    .kalvat-modal-grid {
+        grid-template-columns: 1fr;
+    }
+    .kalvat-modal-visual {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .popular-kalvat-section {
+        padding: 55px 0 65px;
+    }
+    .popular-kalvat-grid,
+    .kalvat-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .kalvat-catalogue-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .kalvat-search-box {
+        width: 100%;
+    }
+    .kalvat-modal-info {
+        padding: 22px 18px;
+    }
+}
