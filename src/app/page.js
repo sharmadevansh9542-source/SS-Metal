@@ -180,7 +180,7 @@ export default function HomePage() {
 
             <div>
               <div className="about-media-card">
-                <img src="/images/factory.jpg" alt="SS Metal Industries Factory Floor" />
+                <img src="/images/company-headquarters.jpg" alt="SS Metal Industries Manufacturing Plant & Headquarters Moradabad" />
                 <div className="about-floating-badge">
                   <div className="num">35K+</div>
                   <div className="lbl">Pieces Produced Daily</div>
@@ -311,7 +311,7 @@ export default function HomePage() {
             <div className="team-card">
               <div className="team-avatar">SB</div>
               <div className="team-info">
-                <h3>Shailendra Bansal</h3>
+                <h3>Mr. Pradeep Kumar Agarwal</h3>
                 <p className="team-role">Managing Director</p>
                 <div className="team-phone">
                   <span>📞</span>
@@ -320,7 +320,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="team-card">
+            {/* <div className="team-card">
               <div className="team-avatar">SB</div>
               <div className="team-info">
                 <h3>Shourya Bansal</h3>
@@ -330,7 +330,7 @@ export default function HomePage() {
                   <a href="tel:+919458771652">+91 9458771652</a> • <a href="tel:+917454874050">+91 74548 74050</a>
                 </div>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>

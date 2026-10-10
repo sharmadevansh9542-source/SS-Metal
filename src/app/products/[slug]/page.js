@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import products, { productMenu } from "../../../data/products";
+import siteConfig from "../../../data/siteConfig";
 import PageHero from "../../../components/PageHero";
 import ProductCard from "../../../components/ProductCard";
 import KalvatCatalogueList from "../../../components/KalvatCatalogueList";
@@ -176,31 +177,74 @@ export default function ProductDetailPage({ params }) {
       <section className="section-pad">
         <div className="container product-detail-grid">
           <div className="product-detail-visual">
-            <img src={product.image} alt={`${product.title} illustration`} />
-            <span>PRODUCT CATEGORY</span>
+            <div className="product-visual-frame">
+              <img src={product.image} alt={`${product.title} - SS Metal Industries Moradabad`} />
+              <div className="product-visual-tag">
+                <span>{product.group}</span>
+              </div>
+            </div>
+            <div className="product-visual-footer-bar">
+              <span className="pv-dot"></span> 100% In-house Inspection &amp; Mill Test Certified
+            </div>
           </div>
           <div className="product-detail-copy">
-            <p className="eyebrow">Category overview</p>
-            <h2>Made for the needs of <em>your market.</em></h2>
-            <p>{product.description}</p>
-            <h3>Items to enquire about</h3>
+            <p className="eyebrow">{product.group} &bull; PRECISION SPECIFICATION</p>
+            <h2>High-Performance <em>{product.title}.</em></h2>
+            <p className="product-lead-desc">{product.description}</p>
+
+            <div className="product-quick-specs-grid">
+              <div className="p-spec-item">
+                <span className="p-spec-k">Available Grades:</span>
+                <span className="p-spec-v">JSLU, J4, 304, 316, 410, 430</span>
+              </div>
+              <div className="p-spec-item">
+                <span className="p-spec-k">Supply Formats:</span>
+                <span className="p-spec-v">Standard &amp; Custom Sized Lots</span>
+              </div>
+              <div className="p-spec-item">
+                <span className="p-spec-k">Dispatch Hub:</span>
+                <span className="p-spec-v">Bypass Road, Manoharpur, Moradabad</span>
+              </div>
+            </div>
+
+            <h3>Key Forms &amp; Supply Variations</h3>
             <ul className="item-list">
               {product.items.map(item => (
                 <li key={item}>
-                  <span>+</span>
+                  <span>✓</span>
                   {item}
                 </li>
               ))}
             </ul>
+
+            <div className="product-cta-action-row">
+              <a
+                href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
+                  `Hello SS Metal Industries, I want to inquire about: ${product.title} (${product.group}). Please share availability, rates and MOQ.`
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-whatsapp"
+              >
+                Inquire on WhatsApp
+              </a>
+              <Link
+                className="button button-copper"
+                href={`/contact?product=${encodeURIComponent(product.title)}`}
+              >
+                Send Formal RFQ <ArrowRight />
+              </Link>
+              <Link
+                className="btn btn-outline"
+                href="/ready-stock"
+              >
+                ⚡ Live Ready Stock
+              </Link>
+            </div>
+
             <p className="small-note">
-              Availability, dimensions, material grade, finish and order quantity must be confirmed directly for each item. Grade, thickness and size available on request.
+              Custom thicknesses, gauges, slit widths, and circle diameters manufactured to precise technical drawings. Material Test Certificate (MTC) provided upon dispatch.
             </p>
-            <Link
-              className="button button-copper"
-              href={`/contact?product=${encodeURIComponent(product.title)}`}
-            >
-              Enquire about this range <ArrowRight />
-            </Link>
           </div>
         </div>
       </section>

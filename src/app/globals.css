@@ -4616,3 +4616,400 @@ p {
         padding: 22px 18px;
     }
 }
+
+
+/* ============================================================
+   EXECUTIVE COMPANY PROFILE & ABOUT PAGE
+============================================================ */
+
+.about-executive-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-executive-grid.reverse-on-desktop {
+    grid-template-columns: 0.95fr 1.05fr;
+}
+
+.about-executive-copy .section-title {
+    font-size: clamp(2rem, 3.4vw, 2.7rem);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.executive-highlights-list {
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.executive-highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.executive-highlight-item:hover {
+    transform: translateX(4px);
+    border-color: #0b4c64;
+}
+
+.executive-highlight-item .highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    font-weight: 800;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.executive-highlight-item strong {
+    font-size: 14px;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.executive-highlight-item p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.about-action-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+/* Corporate Image Card */
+.corporate-image-wrapper {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(11, 37, 64, 0.12);
+    border: 1px solid #cbd5e1;
+    background: #0b2540;
+}
+
+.corporate-main-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.corporate-image-wrapper:hover .corporate-main-img {
+    transform: scale(1.025);
+}
+
+.corporate-floating-card {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    background: rgba(11, 37, 64, 0.92);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cfc-number {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: #f59e0b;
+    line-height: 1;
+}
+
+.cfc-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.cfc-text strong {
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    letter-spacing: 0.2px;
+}
+
+.cfc-text span {
+    font-size: 12px;
+    color: #cbd5e1;
+    display: block;
+}
+
+.plant-quick-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.plant-spec-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.ps-val {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0b2540;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.ps-lbl {
+    font-size: 11px;
+    color: #64748b;
+    display: block;
+}
+
+/* Quality Checklist */
+.quality-checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.qc-check-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0f4c64;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.qc-check-item h4 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px;
+}
+
+.qc-check-item p {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Leadership Band */
+.company-leadership-band {
+    background: linear-gradient(135deg, #0a2540 0%, #163e69 100%);
+    color: #ffffff;
+    padding: 70px 0;
+}
+
+.leadership-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.leadership-text h2 {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    margin: 10px 0 14px;
+    line-height: 1.2;
+}
+
+.leadership-text p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.leadership-contacts-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.leader-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.leader-card h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 2px;
+}
+
+.leader-card p {
+    color: #94a3b8;
+    font-size: 12px;
+    margin: 0 0 8px;
+}
+
+.leader-tel {
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.leader-tel:hover {
+    text-decoration: underline;
+}
+
+.leader-action {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+
+/* ============================================================
+   UPGRADED PRODUCT DETAIL PAGE UI
+============================================================ */
+
+.product-visual-frame {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #edf1f5;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 10px 30px rgba(11, 37, 64, 0.08);
+}
+
+.product-visual-frame img {
+    width: 100%;
+    aspect-ratio: 1.25;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-visual-frame:hover img {
+    transform: scale(1.03);
+}
+
+.product-visual-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(11, 37, 64, 0.88);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.product-visual-footer-bar {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.pv-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #16a34a;
+    display: inline-block;
+}
+
+.product-lead-desc {
+    font-size: 15.5px;
+    color: #334155;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.product-quick-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 24px;
+}
+
+.p-spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.p-spec-k {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.p-spec-v {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.35;
+}
+
+.product-cta-action-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 28px 0 20px;
+}
+
+@media (max-width: 992px) {
+    .about-executive-grid,
+    .leadership-content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .product-quick-specs-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
