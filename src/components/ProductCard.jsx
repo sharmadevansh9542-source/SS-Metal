@@ -4,7 +4,11 @@ import { ArrowRight } from "./Icons";
 export default function ProductCard({ product, index = 0 }) {
   const formattedIndex = String(index + 1).padStart(2, '0');
   return (
-    <article className="product-card">
+    <article
+      className="product-card"
+      data-aos="fade-up"
+      data-aos-delay={(index % 4) * 80}
+    >
       <Link className="product-visual" href={`/products/${product.slug}`} aria-label={`View ${product.title}`}>
         <span className="product-number">{formattedIndex}</span>
         <img src={product.image} alt={`${product.title} illustration`} />

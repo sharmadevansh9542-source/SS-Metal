@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
-        <div className="footer-grid">
+        <div className="footer-grid" data-aos="fade-up">
           {/* Brand info */}
           <div className="footer-brand">
             <Link href="/" className="brand-logo-link" style={{ marginBottom: 16, display: "inline-block" }}>
@@ -66,7 +66,7 @@ export default function Footer() {
               </svg>
               <div>
                 <a href="tel:+919412236335">+91 9412236335</a> (Mr. Pradeep Kumar Agarwal)<br />
-                <a href="tel:+919458771652">+91 9458771652</a> / <a href="tel:+917454874050">+91 74548 74050</a> (Shourya Bansal)
+                {/* <a href="tel:+919458771652">+91 9458771652</a> / <a href="tel:+917454874050">+91 74548 74050</a> (Shourya Bansal) */}
               </div>
             </div>
             <div className="footer-contact-item">

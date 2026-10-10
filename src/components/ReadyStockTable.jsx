@@ -27,7 +27,7 @@ export default function ReadyStockTable({ showHeader = true, compact = false }) 
   return (
     <div className="ready-stock-container">
       {showHeader && (
-        <div className="ready-stock-header-block">
+        <div className="ready-stock-header-block" data-aos="fade-up">
           <h2 className="ready-stock-main-heading">Raw material</h2>
           <p className="ready-stock-main-description">
             Stainless steel circles, sheets, patta, patti and coil in JSLU, J4, 304, 316, 410 and 430 grades.
@@ -36,7 +36,7 @@ export default function ReadyStockTable({ showHeader = true, compact = false }) 
       )}
 
       {/* Filter and search toolbar */}
-      <div className="ready-stock-toolbar">
+      <div className="ready-stock-toolbar" data-aos="fade-up" data-aos-delay="100">
         <div className="ready-stock-grade-chips">
           <span className="chips-label">Filter Grade:</span>
           {grades.map(grade => (
@@ -76,7 +76,7 @@ export default function ReadyStockTable({ showHeader = true, compact = false }) 
       </div>
 
       {/* Table Card */}
-      <div className="ready-stock-card">
+      <div className="ready-stock-card" data-aos="fade-up" data-aos-delay="150">
         <div className="ready-stock-table-responsive">
           <table className="ready-stock-table">
             <thead>

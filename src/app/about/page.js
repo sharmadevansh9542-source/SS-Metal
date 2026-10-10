@@ -31,7 +31,7 @@ export default function AboutPage() {
       {/* Main Company Story Section */}
       <section className="section-pad">
         <div className="container about-executive-grid">
-          <div className="about-executive-copy">
+          <div className="about-executive-copy" data-aos="fade-up">
             <span className="section-kicker">COMPANY PROFILE &amp; HERITAGE</span>
             <h2 className="section-title">
               Experience shaped by four decades of <em>metal craftsmanship.</em>
@@ -49,21 +49,21 @@ export default function AboutPage() {
             </p>
 
             <div className="executive-highlights-list">
-              <div className="executive-highlight-item">
+              <div className="executive-highlight-item" data-aos="fade-up" data-aos-delay="100">
                 <span className="highlight-icon">✓</span>
                 <div>
                   <strong>In-House Manufacturing Excellence</strong>
                   <p>Precision circles, blanks, farma tooling, and deep-drawn kalvat vessels made to exact customer drawings.</p>
                 </div>
               </div>
-              <div className="executive-highlight-item">
+              <div className="executive-highlight-item" data-aos="fade-up" data-aos-delay="150">
                 <span className="highlight-icon">✓</span>
                 <div>
                   <strong>Certified Multi-Grade Stocking</strong>
                   <p>Readily available inventories in JSLU, J4, 304, 316, 410, and 430 grades for immediate factory dispatch.</p>
                 </div>
               </div>
-              <div className="executive-highlight-item">
+              <div className="executive-highlight-item" data-aos="fade-up" data-aos-delay="200">
                 <span className="highlight-icon">✓</span>
                 <div>
                   <strong>Strict Metallurgical Quality Control</strong>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="about-action-group">
+            <div className="about-action-group" data-aos="fade-up" data-aos-delay="200">
               <Link href="/products" className="btn btn-primary">
                 <span>Explore Products Catalogue</span> <ArrowRight />
               </Link>
@@ -82,7 +82,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="about-executive-visual">
+          <div className="about-executive-visual" data-aos="fade-up" data-aos-delay="150">
             <div className="corporate-image-wrapper">
               <img
                 src="/images/company-headquarters.jpg"
@@ -120,7 +120,7 @@ export default function AboutPage() {
       <section className="section-pad section-soft">
         <div className="container">
           <div className="about-executive-grid reverse-on-desktop">
-            <div className="about-executive-visual">
+            <div className="about-executive-visual" data-aos="fade-up">
               <div className="corporate-image-wrapper">
                 <img
                   src="/images/company-quality-lab.jpg"
@@ -137,7 +137,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="about-executive-copy">
+            <div className="about-executive-copy" data-aos="fade-up" data-aos-delay="150">
               <span className="section-kicker">INFRASTRUCTURE &amp; LAB TESTING</span>
               <h2 className="section-title">
                 Zero-compromise testing for <em>repeatable precision.</em>
@@ -177,7 +177,7 @@ export default function AboutPage() {
       {/* Guiding Principles Section */}
       <section className="section-pad">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-aos="fade-up">
             <div>
               <p className="eyebrow">OUR CORE PHILOSOPHY</p>
               <h2>Practical values.<br /><em>Lasting trade partnerships.</em></h2>
@@ -187,17 +187,17 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="value-grid">
-            <article>
+            <article data-aos="fade-up" data-aos-delay="100">
               <span>01</span>
               <h3>Material Authenticity</h3>
               <p>Absolute transparency in grade certification. When you order 304 or J4, you receive verified metallurgy every single time.</p>
             </article>
-            <article>
+            <article data-aos="fade-up" data-aos-delay="200">
               <span>02</span>
               <h3>Master Craftsmanship</h3>
               <p>Four decades of tooling insight ensures optimal blank diameters, minimum scrap generation, and perfect drawing depths.</p>
             </article>
-            <article>
+            <article data-aos="fade-up" data-aos-delay="300">
               <span>03</span>
               <h3>Prompt Dispatch</h3>
               <p>Massive ready-stock warehousing in Moradabad enables rapid dispatch for high-volume orders across India.</p>
@@ -209,7 +209,7 @@ export default function AboutPage() {
       {/* Leadership & Direct Contact Banner */}
       <section className="company-leadership-band">
         <div className="container">
-          <div className="leadership-content">
+          <div className="leadership-content" data-aos="fade-up">
             <div className="leadership-text">
               <span className="eyebrow light">DIRECT EXECUTIVE DESK</span>
               <h2>Speak with our leadership team directly.</h2>
@@ -223,11 +223,11 @@ export default function AboutPage() {
                 <p>Founder &amp; Managing Partner</p>
                 <a href={`tel:${siteConfig.phone}`} className="leader-tel">{siteConfig.phone}</a>
               </div>
-              <div className="leader-card">
+              {/* <div className="leader-card"> 
                 <h4>{siteConfig.contactPerson2}</h4>
                 <p>Director &amp; Operations</p>
                 <a href={`tel:${siteConfig.secondaryPhone}`} className="leader-tel">{siteConfig.secondaryPhone}</a>
-              </div>
+              </div>*/}
               <div className="leader-action">
                 <a
                   href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Hello SS Metal Industries, I want to discuss a business requirement.")}`}

@@ -26,7 +26,7 @@ export default function ProductsPage() {
       />
       <section className="section-pad">
         <div className="container">
-          <div className="catalog-intro">
+          <div className="catalog-intro" data-aos="fade-up">
             <div>
               <p className="eyebrow">Find your category</p>
               <h2>Precision forms for <em>industry & trade.</em></h2>

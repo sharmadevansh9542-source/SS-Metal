@@ -2,6 +2,7 @@ import { Playfair_Display, Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import AOSInit from "../components/AOSInit";
 import siteConfig from "../data/siteConfig";
 
 const playfair = Playfair_Display({
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${outfit.variable} ${dmSans.variable}`}>
       <body>
+        <AOSInit />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -29,7 +29,7 @@ export default function ManufacturingPage() {
 
       <section className="section-pad">
         <div className="container split-content">
-          <div>
+          <div data-aos="fade-up">
             <p className="eyebrow">The Process</p>
             <h2>From Product Brief To <em>Manufacturing Delivery.</em></h2>
             <img
@@ -38,7 +38,7 @@ export default function ManufacturingPage() {
               alt="SS Metal Industries Quality Assurance & Manufacturing Plant"
             />
           </div>
-          <div className="rich-copy">
+          <div className="rich-copy" data-aos="fade-up" data-aos-delay="150">
             <p className="body-large">
               Every manufacturing enquiry starts with understanding the intended application, gauge, draw ratio, and surface requirements.
             </p>
@@ -46,21 +46,21 @@ export default function ManufacturingPage() {
               For in-house manufacturing and raw material blanking, we match the optimal stainless steel coil grade (JSLU, J4, 304, 316, 410, 430) with appropriate hydraulic tonnage to prevent wrinkling and ensure razor-sharp dimensional accuracy.
             </p>
             <div className="process-steps">
-              <div>
+              <div data-aos="fade-up" data-aos-delay="100">
                 <span>01</span>
                 <div>
                   <h3>Understand</h3>
                   <p>Share your product drawing, target dimensions, batch quantity, and application.</p>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="150">
                 <span>02</span>
                 <div>
                   <h3>Specify</h3>
                   <p>Confirm material grade, thickness tolerances, blanking dies, and finish parameters.</p>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="200">
                 <span>03</span>
                 <div>
                   <h3>Produce &amp; Dispatch</h3>
@@ -76,7 +76,7 @@ export default function ManufacturingPage() {
       </section>
 
       <section className="simple-cta">
-        <div className="container simple-cta-inner">
+        <div className="container simple-cta-inner" data-aos="fade-up">
           <div>
             <p className="eyebrow light">BULK AND TRADE ENQUIRIES</p>
             <h2>Let&apos;s start with your manufacturing brief.</h2>

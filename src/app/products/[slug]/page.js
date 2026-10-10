@@ -54,7 +54,7 @@ export default function ProductDetailPage({ params }) {
         />
         <section className="section-pad">
           <div className="container">
-            <div className="catalog-intro">
+            <div className="catalog-intro" data-aos="fade-up">
               <div>
                 <p className="eyebrow">{group.title}</p>
                 <h2>Precision forms for <em>industry & trade.</em></h2>
@@ -71,7 +71,7 @@ export default function ProductDetailPage({ params }) {
           </div>
         </section>
         <section className="section-pad section-soft">
-          <div className="container quality-strip-inner">
+          <div className="container quality-strip-inner" data-aos="fade-up">
             <div>
               <p className="eyebrow">CUSTOM ENQUIRIES</p>
               <h2>Discuss your <em>{group.title}</em> requirement.</h2>
@@ -139,11 +139,11 @@ export default function ProductDetailPage({ params }) {
         {/* Manufacturing Highlights & Technical Overview */}
         <section className="section-pad section-soft">
           <div className="container product-detail-grid">
-            <div className="product-detail-visual">
+            <div className="product-detail-visual" data-aos="fade-up">
               <img src={product.image} alt="In-house Unfinished Utensils Manufacturing" />
               <span>IN-HOUSE MANUFACTURING</span>
             </div>
-            <div className="product-detail-copy">
+            <div className="product-detail-copy" data-aos="fade-up" data-aos-delay="150">
               <p className="eyebrow">Moradabad Manufacturing Unit</p>
               <h2>Precision Pressing &amp; <em>Deep Drawn Kalvat.</em></h2>
               <p>{product.description}</p>
@@ -172,7 +172,7 @@ export default function ProductDetailPage({ params }) {
         {/* Related In-House Manufacturing Categories */}
         <section className="section-pad">
           <div className="container">
-            <div className="section-heading">
+            <div className="section-heading" data-aos="fade-up">
               <div>
                 <p className="eyebrow">In-House Manufacturing</p>
                 <h2>Other <em>manufacturing categories.</em></h2>
@@ -216,7 +216,7 @@ export default function ProductDetailPage({ params }) {
       />
       <section className="section-pad">
         <div className="container product-detail-grid">
-          <div className="product-detail-visual">
+          <div className="product-detail-visual" data-aos="fade-up">
             <div className="product-visual-frame">
               <img src={product.image} alt={`${product.title} - SS Metal Industries Moradabad`} />
               <div className="product-visual-tag">
@@ -227,7 +227,7 @@ export default function ProductDetailPage({ params }) {
               <span className="pv-dot"></span> 100% In-house Inspection &amp; Mill Test Certified
             </div>
           </div>
-          <div className="product-detail-copy">
+          <div className="product-detail-copy" data-aos="fade-up" data-aos-delay="150">
             <p className="eyebrow">{product.group} &bull; PRECISION SPECIFICATION</p>
             <h2>High-Performance <em>{product.title}.</em></h2>
             <p className="product-lead-desc">{product.description}</p>
@@ -290,7 +290,7 @@ export default function ProductDetailPage({ params }) {
       </section>
       <section className="section-pad section-soft">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-aos="fade-up">
             <div>
               <p className="eyebrow">You may also explore</p>
               <h2>Related <em>categories.</em></h2>

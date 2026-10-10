@@ -25,7 +25,7 @@ export default function KalvatCatalogueList({ showHeader = true }) {
   return (
     <div className="kalvat-catalogue-container">
       {showHeader && (
-        <div className="kalvat-catalogue-header">
+        <div className="kalvat-catalogue-header" data-aos="fade-up">
           <h2 className="kalvat-catalogue-main-title">Products catalogue</h2>
           <p className="kalvat-catalogue-main-desc">
             Unfinished Kalvat utensils, barware, bathware and kitchenware. Ask for custom sizes and weights.
@@ -34,7 +34,7 @@ export default function KalvatCatalogueList({ showHeader = true }) {
       )}
 
       {/* Toolbar: Category pills & Search */}
-      <div className="kalvat-catalogue-toolbar">
+      <div className="kalvat-catalogue-toolbar" data-aos="fade-up" data-aos-delay="100">
         <div className="kalvat-category-pills">
           {kalvatCategories.map((cat) => (
             <button
@@ -73,7 +73,7 @@ export default function KalvatCatalogueList({ showHeader = true }) {
       </div>
 
       {/* Product count */}
-      <div className="kalvat-count-row">
+      <div className="kalvat-count-row" data-aos="fade-up" data-aos-delay="150">
         <span>{filteredProducts.length} products</span>
       </div>
 
@@ -94,14 +94,19 @@ export default function KalvatCatalogueList({ showHeader = true }) {
         </div>
       ) : (
         <div className="kalvat-grid">
-          {filteredProducts.map((product) => {
+          {filteredProducts.map((product, idx) => {
             const waMsg = encodeURIComponent(
               `Hello SS Metal Industries, I am interested in Unfinished Kalvat Product: ${product.title} (${product.category}).\nSizes: ${product.sizes}\nFinish: ${product.finish}\nPlease share wholesale rate and minimum order quantity.`
             );
             const waHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${waMsg}`;
 
             return (
-              <div key={product.id} className="kalvat-card">
+              <div
+                key={product.id}
+                className="kalvat-card"
+                data-aos="fade-up"
+                data-aos-delay={(idx % 4) * 80}
+              >
                 <div
                   className="kalvat-card-visual"
                   onClick={() => setQuickViewProduct(product)}

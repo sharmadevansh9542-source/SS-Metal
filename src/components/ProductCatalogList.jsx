@@ -26,7 +26,7 @@ export default function ProductCatalogList({ products = [] }) {
 
   return (
     <div className="product-catalog-wrap">
-      <div className="catalog-filters" role="tablist" aria-label="Product categories filter">
+      <div className="catalog-filters" role="tablist" aria-label="Product categories filter" data-aos="fade-up">
         {filterTabs.map(tab => {
           const isActive = selectedGroupSlug === tab.slug;
           const count = getCount(tab);

@@ -8,7 +8,7 @@ export default function PopularKalvatSection() {
   return (
     <section className="popular-kalvat-section">
       <div className="container">
-        <div className="popular-kalvat-header">
+        <div className="popular-kalvat-header" data-aos="fade-up">
           <h2 className="popular-kalvat-title">Our popular unfinished Kalvat products</h2>
           <p className="popular-kalvat-subtitle">
             Raw craftsmanship from 26 years of manufacturing, ready for polishing, plating or branding.
@@ -16,14 +16,19 @@ export default function PopularKalvatSection() {
         </div>
 
         <div className="popular-kalvat-grid">
-          {popularKalvatProducts.map((product) => {
+          {popularKalvatProducts.map((product, idx) => {
             const waMsg = encodeURIComponent(
               `Hello SS Metal Industries, I want to inquire about Unfinished Kalvat Product: ${product.title} (${product.category}).\nSizes available: ${product.sizes}`
             );
             const waHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${waMsg}`;
 
             return (
-              <div key={product.id} className="popular-kalvat-card">
+              <div
+                key={product.id}
+                className="popular-kalvat-card"
+                data-aos="fade-up"
+                data-aos-delay={(idx % 4) * 80}
+              >
                 <div className="popular-kalvat-card-visual">
                   <KalvatProductVisual shape={product.shape} title={product.title} />
                 </div>
@@ -45,7 +50,7 @@ export default function PopularKalvatSection() {
           })}
         </div>
 
-        <div className="popular-kalvat-footer">
+        <div className="popular-kalvat-footer" data-aos="fade-up" data-aos-delay="100">
           <Link href="/products/ss-utensils" className="btn-view-catalogue">
             View all products in catalogue
           </Link>

@@ -30,14 +30,14 @@ export default function ContactPage() {
 
       <section className="section-pad">
         <div className="container contact-grid">
-          <div className="contact-info">
+          <div className="contact-info" data-aos="fade-up">
             <p className="eyebrow">Contact Details</p>
             <h2>Good projects start with a <em>direct conversation.</em></h2>
             <p>
               Share your required grade, dimensions, gauge, and approximate quantity for immediate pricing and delivery schedules.
             </p>
 
-            <div className="contact-method">
+            <div className="contact-method" data-aos="fade-up" data-aos-delay="100">
               <span className="contact-icon"><PhoneIcon /></span>
               <div>
                 <small>Call Our Desk</small>
@@ -46,7 +46,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="contact-method">
+            <div className="contact-method" data-aos="fade-up" data-aos-delay="150">
               <span className="contact-icon">✉</span>
               <div>
                 <small>Email Inquiries</small>
@@ -54,7 +54,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="contact-method">
+            <div className="contact-method" data-aos="fade-up" data-aos-delay="200">
               <span className="contact-icon">⌖</span>
               <div>
                 <small>Manufacturing Unit &amp; Office</small>
@@ -71,7 +71,7 @@ export default function ContactPage() {
               Open plant location in Google Maps ↗
             </a>
 
-            <div className="contact-note">
+            <div className="contact-note" data-aos="fade-up" data-aos-delay="250">
               <strong>Quick Quotation Tip</strong>
               <p>
                 Mentioning grade (e.g., 304, 430, JSLU), circle diameter or coil width, and gauge in mm speeds up the estimation process.
@@ -79,7 +79,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="contact-form-panel">
+          <div className="contact-form-panel" data-aos="fade-up" data-aos-delay="150">
             <div className="form-heading">
               <span>01</span>
               <div>

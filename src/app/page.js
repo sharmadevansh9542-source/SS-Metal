@@ -39,17 +39,17 @@ export default function HomePage() {
         <div className="hero-image-layer"></div>
         <div className="container home-hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow light">
+            <p className="eyebrow light" data-aos="fade-up" data-aos-delay="100">
               <span className="eyebrow-line"></span> Stainless steel manufacturing
             </p>
-            <h1>
+            <h1 data-aos="fade-up" data-aos-delay="150">
               Made with metal.<br />
               <em>Built on trust.</em>
             </h1>
-            <p className="hero-lead">
+            <p className="hero-lead" data-aos="fade-up" data-aos-delay="200">
               Precision stainless steel coils, sheets, circles, blanks, and cut-to-size products for trade and manufacturing partners—shaped with care and engineered for industry.
             </p>
-            <div className="hero-actions">
+            <div className="hero-actions" data-aos="fade-up" data-aos-delay="250">
               <Link className="button button-copper" href="/products">
                 Explore our products <ArrowRight />
               </Link>
@@ -57,7 +57,7 @@ export default function HomePage() {
                 Discover our story
               </Link>
             </div>
-            <div className="hero-note">
+            <div className="hero-note" data-aos="fade-up" data-aos-delay="300">
               <span className="hero-note-line"></span>
               <span>
                 Manufacturing experience<br />
@@ -69,7 +69,7 @@ export default function HomePage() {
       </section>
 
       {/* Ready Stock Callout Strip */}
-      <section className="ready-stock-strip">
+      <section className="ready-stock-strip" data-aos="fade-up">
         <div className="container ready-stock-strip-inner">
           <div className="rss-left">
             <div className="rss-icon">
@@ -96,7 +96,7 @@ export default function HomePage() {
       <section className="section-credentials">
         <div className="container">
           <div className="credentials-grid">
-            <div className="credential-card">
+            <div className="credential-card" data-aos="fade-up" data-aos-delay="100">
               <div className="credential-badge-icon">
                 <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -108,7 +108,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="credential-card">
+            <div className="credential-card" data-aos="fade-up" data-aos-delay="200">
               <div className="credential-badge-icon">
                 <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
@@ -120,7 +120,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="credential-card">
+            <div className="credential-card" data-aos="fade-up" data-aos-delay="300">
               <div className="credential-badge-icon">
                 <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
@@ -139,7 +139,7 @@ export default function HomePage() {
       <section className="section-about">
         <div className="container">
           <div className="about-grid">
-            <div>
+            <div data-aos="fade-up">
               <span className="section-kicker">Welcome to SS Metal Industries</span>
               <h2 className="section-title">Pioneering Industrial &amp; Formed Steelware in India</h2>
               <div className="title-divider"></div>
@@ -178,7 +178,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div>
+            <div data-aos="fade-up" data-aos-delay="150">
               <div className="about-media-card">
                 <img src="/images/company-headquarters.jpg" alt="SS Metal Industries Manufacturing Plant & Headquarters Moradabad" />
                 <div className="about-floating-badge">
@@ -193,11 +193,9 @@ export default function HomePage() {
 
       {/* Popular Unfinished Kalvat Products Section */}
       <PopularKalvatSection />
-
-      {/* Product Categories Section */}
       <section className="featured-categories-section">
         <div className="container">
-          <div className="featured-categories-header">
+          <div className="featured-categories-header" data-aos="fade-up">
             <div>
               <p className="eyebrow">Product Categories</p>
               <h2>
@@ -210,7 +208,12 @@ export default function HomePage() {
           </div>
           <div className="featured-categories-grid">
             {featuredCategories.map((cat, idx) => (
-              <article key={cat.slug} className="featured-category-card">
+              <article
+                key={cat.slug}
+                className="featured-category-card"
+                data-aos="fade-up"
+                data-aos-delay={(idx + 1) * 120}
+              >
                 <Link
                   className="featured-category-visual"
                   href={cat.href}
@@ -238,7 +241,7 @@ export default function HomePage() {
       {/* Signature & Popular Products */}
       <section className="products-section section-pad section-soft">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading" data-aos="fade-up">
             <div>
               <span className="section-kicker">Signature Highlights</span>
               <h2 className="section-title">
@@ -271,22 +274,22 @@ export default function HomePage() {
       <section className="section-stats">
         <div className="container">
           <div className="stats-grid">
-            <div className="stat-item">
+            <div className="stat-item" data-aos="fade-up" data-aos-delay="100">
               <div className="stat-num">50+</div>
               <div className="stat-divider"></div>
               <div className="stat-label">Exporters Clients</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item" data-aos="fade-up" data-aos-delay="200">
               <div className="stat-num">100+</div>
               <div className="stat-divider"></div>
               <div className="stat-label">Satisfied OEM Brands</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item" data-aos="fade-up" data-aos-delay="300">
               <div className="stat-num">35000+</div>
               <div className="stat-divider"></div>
               <div className="stat-label">Products Per Day</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item" data-aos="fade-up" data-aos-delay="400">
               <div className="stat-num">200+</div>
               <div className="stat-divider"></div>
               <div className="stat-label">Skilled Worker Team</div>
@@ -298,7 +301,7 @@ export default function HomePage() {
       {/* Executive Leadership / Management Team */}
       <section className="section-team">
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }} data-aos="fade-up">
             <span className="section-kicker">Executive Leadership</span>
             <h2 className="section-title">Management Team</h2>
             <div className="title-divider center"></div>
@@ -308,7 +311,7 @@ export default function HomePage() {
           </div>
 
           <div className="team-grid">
-            <div className="team-card">
+            <div className="team-card" data-aos="fade-up" data-aos-delay="150">
               <div className="team-avatar">SB</div>
               <div className="team-info">
                 <h3>Mr. Pradeep Kumar Agarwal</h3>
@@ -338,7 +341,7 @@ export default function HomePage() {
       {/* Manufacturing Infrastructure Preview */}
       <section style={{ padding: "80px 0", background: "#f8fafc" }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }} data-aos="fade-up">
             <span className="section-kicker">World-Class Facility</span>
             <h2 className="section-title">Manufacturing Infrastructure</h2>
             <div className="title-divider center"></div>
@@ -348,21 +351,21 @@ export default function HomePage() {
           </div>
 
           <div className="infra-gallery-grid">
-            <div className="infra-card">
+            <div className="infra-card" data-aos="fade-up" data-aos-delay="100">
               <img src="/images/ss-coil.jpg" alt="Main Warehouse & Storage" />
               <div className="infra-caption">📍 Main Coils Storage &amp; Dispatch Line</div>
             </div>
-            <div className="infra-card">
+            <div className="infra-card" data-aos="fade-up" data-aos-delay="200">
               <img src="/images/factory.jpg" alt="Machinery Lines" />
               <div className="infra-caption">⚙️ Heavy Forming &amp; Deep Draw Plant</div>
             </div>
-            <div className="infra-card">
+            <div className="infra-card" data-aos="fade-up" data-aos-delay="300">
               <img src="/images/ss-trade-cutting.jpg" alt="Pipes and Blanks Staging" />
               <div className="infra-caption">📦 Precision Cut Blanks &amp; Tubes Staging</div>
             </div>
           </div>
 
-          <div style={{ textAlign: "center", marginTop: 36 }}>
+          <div style={{ textAlign: "center", marginTop: 36 }} data-aos="fade-up" data-aos-delay="200">
             <Link href="/manufacturing" className="btn btn-outline">
               <span>View Full Infrastructure &amp; Plant Tour</span>
             </Link>
@@ -372,7 +375,7 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <section className="section-cta-banner">
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h2>Partner with India&apos;s Leading Stainless Steel Manufacturer</h2>
           <p>
             Whether you need precision circles, pre-cut blanks, raw steel coils, sheets, or pipes, our directors are available to serve your requirements.

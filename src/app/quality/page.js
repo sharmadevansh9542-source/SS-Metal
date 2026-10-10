@@ -29,7 +29,7 @@ export default function QualityPage() {
 
       <section className="section-pad">
         <div className="container split-content">
-          <div>
+          <div data-aos="fade-up">
             <p className="eyebrow">Our Standard</p>
             <h2>Consistency starts with <em>meticulous clarity.</em></h2>
             <img
@@ -38,7 +38,7 @@ export default function QualityPage() {
               alt="Metallurgical testing and quality control lab"
             />
           </div>
-          <div className="rich-copy">
+          <div className="rich-copy" data-aos="fade-up" data-aos-delay="150">
             <p className="body-large">
               Quality is engineered into every stage of production—from the raw coil uncoiling to final blanking, trimming, and packaging.
             </p>
@@ -46,21 +46,21 @@ export default function QualityPage() {
               We ensure our clients receive exactly what is ordered: calibrated thickness across the sheet width, uniform grain structure for deep-drawing without cracking, and pure surface cleanliness.
             </p>
             <div className="process-steps">
-              <div>
+              <div data-aos="fade-up" data-aos-delay="100">
                 <span>01</span>
                 <div>
                   <h3>Grade Verification</h3>
                   <p>Accurate metallurgical checks ensuring JSLU, J4, 304, 316, 410, and 430 grade composition.</p>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="150">
                 <span>02</span>
                 <div>
                   <h3>Micrometer Gauge Calibration</h3>
                   <p>Micrometer checks across the coil body to ensure zero variation in thickness tolerances.</p>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="200">
                 <span>03</span>
                 <div>
                   <h3>Drawing &amp; Forming Test</h3>
@@ -77,22 +77,22 @@ export default function QualityPage() {
 
       <section className="section-pad section-soft">
         <div className="container quality-cards">
-          <article>
+          <article data-aos="fade-up" data-aos-delay="100">
             <span>01</span>
             <h3>Specification Clarity</h3>
             <p>Confirm dimensions, material grade, gauge tolerance, and intended draw depth prior to production.</p>
           </article>
-          <article>
+          <article data-aos="fade-up" data-aos-delay="200">
             <span>02</span>
             <h3>Surface Integrity</h3>
             <p>Define surface finish (2B, No. 4, BA, Mirror) and protect with standard laser/PVC film coating.</p>
           </article>
-          <article>
+          <article data-aos="fade-up" data-aos-delay="300">
             <span>03</span>
             <h3>Lot Traceability</h3>
             <p>Full batch labeling and weight verification for transparent logistics and invoicing.</p>
           </article>
-          <article>
+          <article data-aos="fade-up" data-aos-delay="400">
             <span>04</span>
             <h3>Safe Industrial Packaging</h3>
             <p>Moisture-resistant strapping and palletizing to prevent transport abrasion and edge damage.</p>
@@ -101,7 +101,7 @@ export default function QualityPage() {
       </section>
 
       <section className="simple-cta">
-        <div className="container simple-cta-inner">
+        <div className="container simple-cta-inner" data-aos="fade-up">
           <div>
             <p className="eyebrow light">HAVE SPECIFIC STANDARDS?</p>
             <h2>Share your technical quality requirements.</h2>

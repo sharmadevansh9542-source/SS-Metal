@@ -5337,3 +5337,74 @@ p {
     }
 }
 
+
+/* ============================================================
+   AOS CUSTOM ANIMATION STYLES (SMOOTH RISING UP EFFECT)
+============================================================ */
+
+[data-aos] {
+    pointer-events: auto;
+}
+
+/* ============================================================
+   AOS FLOAT-UP ANIMATIONS ("UTH KAR AANE WALA" EFFECT)
+   Buttery-smooth cubic-bezier for mobile & desktop
+============================================================ */
+
+[data-aos="fade-up"] {
+    transform: translate3d(0, 38px, 0);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.85s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* Subtle Rise for Typography and Eyebrows */
+[data-aos="fade-up-sm"] {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.75s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+[data-aos="fade-up-sm"].aos-animate {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* Deeper Rise for Cards and Image Frames */
+[data-aos="fade-up-card"] {
+    transform: translate3d(0, 48px, 0);
+    opacity: 0;
+    transition-property: transform, opacity, box-shadow;
+    transition-duration: 0.9s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+[data-aos="fade-up-card"].aos-animate {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* Mobile fine-tuning (gentler translate to prevent scroll jank) */
+@media (max-width: 640px) {
+    [data-aos="fade-up"] {
+        transform: translate3d(0, 26px, 0);
+        transition-duration: 0.75s;
+    }
+    [data-aos="fade-up-card"] {
+        transform: translate3d(0, 32px, 0);
+        transition-duration: 0.8s;
+    }
+}
+
+

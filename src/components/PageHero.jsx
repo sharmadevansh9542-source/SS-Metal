@@ -29,7 +29,7 @@ export default function PageHero({
       <div className="container page-hero-content">
         <div className="hero-copy">
           {/* Breadcrumb glassmorphism badge */}
-          <nav className="hero-breadcrumb-badge" aria-label="Breadcrumb">
+          <nav className="hero-breadcrumb-badge" aria-label="Breadcrumb" data-aos="fade-up" data-aos-delay="50">
             <Link href="/" className="hbb-home">Home</Link>
             <span className="hbb-sep">/</span>
             {parentTrail.map((item, idx) => (
@@ -41,11 +41,11 @@ export default function PageHero({
             <span className="hbb-current">{title}</span>
           </nav>
 
-          <p className="eyebrow light">
+          <p className="eyebrow light" data-aos="fade-up" data-aos-delay="100">
             <span className="eyebrow-line"></span> {eyebrow}
           </p>
 
-          <h1 className="hero-title">
+          <h1 className="hero-title" data-aos="fade-up" data-aos-delay="150">
             {title}
             {highlight && (
               <>
@@ -55,9 +55,9 @@ export default function PageHero({
             )}
           </h1>
 
-          {description && <p className="hero-lead">{description}</p>}
+          {description && <p className="hero-lead" data-aos="fade-up" data-aos-delay="200">{description}</p>}
 
-          <div className="hero-actions">
+          <div className="hero-actions" data-aos="fade-up" data-aos-delay="250">
             {primaryAction ? (
               primaryAction.href.startsWith("http") ? (
                 <a
@@ -90,7 +90,7 @@ export default function PageHero({
             )}
           </div>
 
-          <div className="hero-note">
+          <div className="hero-note" data-aos="fade-up" data-aos-delay="300">
             <span className="hero-note-line"></span>
             <span>
               {note || (
