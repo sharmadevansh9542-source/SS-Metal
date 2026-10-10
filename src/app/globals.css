@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --navy: #152A33;
@@ -12,6 +12,8 @@
   --line: #d8ddda;
   --white: #fff;
   --max: 1200px;
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
 }
 
 /* Base reset */
@@ -26,7 +28,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: "DM Sans", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.65;
   background: #fff;
@@ -75,9 +77,10 @@ svg {
 
 /* Typography */
 .eyebrow {
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--copper-dark);
   margin: 0 0 18px;
@@ -93,42 +96,72 @@ svg {
   vertical-align: middle;
   margin-right: 10px;
 }
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   margin-top: 0;
 }
-h1, h2, h3 {
-  font-family: Manrope, Arial, sans-serif;
-  line-height: 1.12;
-  letter-spacing: -0.045em;
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 h1 {
-  font-size: clamp(38px, 5.3vw, 76px);
-  font-weight: 600;
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1.1;
   margin-bottom: 25px;
 }
 h2 {
-  font-size: clamp(28px, 3.7vw, 49px);
-  font-weight: 600;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
   margin-bottom: 24px;
 }
 h3 {
-  font-size: 21px;
-  font-weight: 700;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  line-height: 1.2;
   margin-bottom: 12px;
 }
-h1 em, h2 em {
-  font-family: Georgia, serif;
+h4 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+h1 em, h2 em, h3 em, h4 em {
+  font-family: var(--font-serif);
+  font-style: italic;
   font-weight: 400;
-  color: var(--copper);
-  letter-spacing: -0.055em;
+  letter-spacing: 0;
+  color: #c4956a;
+  background: linear-gradient(90deg, #e6c79c, #c4956a 60%, #a97a50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Darker copper on light backgrounds for crisp contrast and readability */
+.featured-categories-header h2 em,
+.intro-main h2 em,
+.section-heading h2 em,
+.catalog-intro h2 em,
+.split-content h2 em,
+.quality-strip-inner h2 em,
+.not-found h1 em,
+.section-soft h2 em,
+.section-pad:not(.manufacturing-section):not(.cta-section) h2 em {
+  color: #a97a50;
+  background: linear-gradient(90deg, #c4956a, #a97a50 60%, #8c5e34);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 p {
+  font-family: var(--font-sans);
   color: var(--muted);
+  line-height: 1.75;
+  text-wrap: pretty;
 }
 .body-large {
   font-size: 18px;
   line-height: 1.85;
   color: #47545a;
+  text-wrap: pretty;
 }
 
 /* Buttons & Links */
@@ -250,7 +283,7 @@ p {
   place-items: center;
   position: relative;
   color: var(--navy);
-  font-family: Manrope, sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -273,7 +306,7 @@ p {
   line-height: 1.2;
 }
 .brand-copy strong {
-  font-family: Manrope, sans-serif;
+  font-family: var(--font-sans);
   letter-spacing: 1.2px;
   font-size: 15px;
   color: var(--navy);
@@ -639,13 +672,21 @@ p {
   z-index: 2;
 }
 .hero-copy h1 {
-  font-size: clamp(34px, 4.2vw, 54px);
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   line-height: 1.1;
   margin: 0 0 16px;
+  color: #fff;
 }
 .hero-copy h1 em {
-  color: var(--copper);
+  font-family: var(--font-serif);
   font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #c4956a;
+  background: linear-gradient(90deg, #e6c79c, #c4956a 60%, #a97a50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .hero-lead {
   font-size: 15px;
@@ -669,8 +710,11 @@ p {
   color: #9faeb1;
 }
 .hero-note strong {
-  font-size: 14px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 15px;
   color: #fff;
+  letter-spacing: 0.02em;
 }
 .hero-note-line {
   width: 36px;
@@ -696,14 +740,10 @@ p {
   flex-wrap: wrap;
 }
 .featured-categories-header h2 {
-  font-size: clamp(28px, 3.2vw, 42px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
   color: var(--navy);
   margin-bottom: 0;
-  line-height: 1.18;
-}
-.featured-categories-header h2 em {
-  color: var(--copper);
-  font-style: italic;
+  line-height: 1.2;
 }
 .featured-categories-grid {
   display: grid;
@@ -752,11 +792,11 @@ p {
   position: absolute;
   top: 14px;
   left: 16px;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--copper);
-  letter-spacing: 1.5px;
-  font-family: Manrope, sans-serif;
+  letter-spacing: 0.05em;
+  font-family: var(--font-serif);
 }
 .featured-category-body {
   padding: 24px 22px 26px;
@@ -774,12 +814,12 @@ p {
   display: block;
 }
 .featured-category-title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 500;
   color: var(--navy);
   margin: 0 0 10px;
   line-height: 1.25;
-  font-family: Manrope, sans-serif;
+  font-family: var(--font-serif);
 }
 .featured-category-title a {
   color: var(--navy);
@@ -872,14 +912,16 @@ p {
   margin: 24px 0;
 }
 .section-kicker p {
-  font-family: Georgia, serif;
+  font-family: var(--font-serif);
   font-style: italic;
-  font-size: 18px;
-  line-height: 1.45;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.4;
   color: #435158;
 }
 .intro-main h2 {
-  font-size: clamp(30px, 3.5vw, 45px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
 }
 .intro-main .body-large {
   font-size: 15px;
@@ -898,7 +940,10 @@ p {
   gap: 13px;
 }
 .intro-stat strong {
-  font: 500 29px Georgia, serif;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
   color: var(--copper-dark);
 }
 .intro-stat span {
@@ -990,8 +1035,10 @@ p {
   top: 15px;
   left: 17px;
   z-index: 1;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   color: #56646a;
 }
 .visual-arrow {
@@ -1017,7 +1064,9 @@ p {
   margin-bottom: 11px;
 }
 .product-card-copy h3 {
-  font-size: 20px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 500;
   margin-bottom: 12px;
 }
 .product-card-copy h3 a:hover {
@@ -1128,7 +1177,8 @@ p {
   font-weight: 700;
 }
 .manufacturing-copy h2 {
-  font-size: clamp(34px, 4vw, 55px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
 }
 .manufacturing-copy > p:not(.eyebrow) {
   color: #aebcc0;
@@ -1147,7 +1197,10 @@ p {
   border-bottom: 1px solid #43545c;
 }
 .approach-list > div > span {
-  font: italic 19px Georgia, serif;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
   color: var(--copper);
 }
 .approach-list p {
@@ -1202,8 +1255,10 @@ p {
   position: relative;
 }
 .cta-inner h2 {
-  font-size: clamp(38px, 5vw, 65px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
   margin-bottom: 20px;
+  color: #fff;
 }
 .cta-inner > div:first-child > p:not(.eyebrow) {
   max-width: 440px;
@@ -1231,7 +1286,7 @@ p {
   position: absolute;
   right: 10%;
   top: 5%;
-  font-family: Manrope, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 800;
   font-size: 180px;
   letter-spacing: -15px;
@@ -1272,8 +1327,11 @@ p {
   padding-bottom: 5px;
 }
 .footer-main h3 {
-  font-size: 13px;
-  letter-spacing: 0.3px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: #f0f2ee;
   margin: 7px 0 22px;
 }
@@ -1398,14 +1456,16 @@ p {
   padding: 52px 0 58px;
 }
 .page-hero h1 {
-  font-size: clamp(34px, 4.5vw, 58px);
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   max-width: 760px;
   margin: 20px 0 17px;
+  color: #fff;
 }
 .page-hero-description {
+  font-family: var(--font-sans);
   max-width: 600px;
   color: #c2cccd;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   margin: 0;
 }
@@ -1455,11 +1515,16 @@ p {
 .value-grid article > span, .quality-cards article > span {
   display: block;
   color: var(--copper-dark);
-  font: italic 20px Georgia, serif;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
   margin-bottom: 32px;
 }
 .value-grid h3, .quality-cards h3 {
-  font-size: 18px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 500;
 }
 .value-grid p, .quality-cards p {
   font-size: 12px;
@@ -1513,14 +1578,17 @@ p {
   padding: 12px 18px;
 }
 .product-detail-copy h2 {
-  font-size: clamp(30px, 3.4vw, 44px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
 }
 .product-detail-copy > p:not(.eyebrow) {
   font-size: 14px;
   line-height: 1.9;
 }
 .product-detail-copy h3 {
-  font-size: 15px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 500;
   margin: 30px 0 15px;
 }
 .item-list {
@@ -1569,10 +1637,15 @@ p {
 }
 .process-steps > div > span {
   color: var(--copper-dark);
-  font: italic 20px Georgia, serif;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
 }
 .process-steps h3 {
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 500;
   margin: 0 0 5px;
 }
 .process-steps p {
@@ -1593,7 +1666,8 @@ p {
   align-items: flex-start;
 }
 .contact-info h2 {
-  font-size: clamp(30px, 3.4vw, 44px);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
 }
 .contact-info > p:not(.eyebrow) {
   font-size: 13px;
@@ -1671,11 +1745,16 @@ p {
   margin-bottom: 25px;
 }
 .form-heading > span {
-  font: italic 24px Georgia, serif;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 26px;
   color: var(--copper-dark);
 }
 .form-heading h2 {
-  font-size: 24px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 500;
   margin: 0 0 5px;
 }
 .form-heading p {
@@ -1729,12 +1808,26 @@ p {
 .not-found {
   padding: 110px 0 130px;
   background: var(--paper);
+  text-align: center;
+}
+.not-found-num {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--copper-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 .not-found h1 {
   margin-bottom: 20px;
 }
 .not-found > div > p:not(.eyebrow) {
-  margin-bottom: 28px;
+  max-width: 460px;
+  margin: 0 auto 28px;
+}
+.not-found .button {
+  margin: 0 auto;
 }
 
 /* ============================================================

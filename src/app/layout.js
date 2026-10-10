@@ -1,7 +1,16 @@
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import siteConfig from "../data/siteConfig";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-playfair"
+});
 
 export const metadata = {
   title: { default: "SS Metal Industries | Stainless Steelware", template: "%s | SS Metal Industries" },
@@ -16,7 +25,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={playfair.variable}>
       <body>
         <Header />
         <main>{children}</main>
