@@ -1,7 +1,7 @@
-# Reference audit — sagarmetalindustries.com
+# Reference audit — SSmetalindustries.com
 
 ## Reference
-- Homepage: https://www.sagarmetalindustries.com/
+- Homepage: https://www.SSmetalindustries.com/
 - Publicly indexed company profile identifies the business as a manufacturer of stainless-steel kitchenware, cookware, bath accessories and bar accessories, with unfinished/Kalvat products and a manufacturing focus.
 - Publicly indexed company information mentions establishment in 1980 and a base in Manoharpur, Moradabad, Uttar Pradesh. Verify all business details with the company before production use.
 

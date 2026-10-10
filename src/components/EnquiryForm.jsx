@@ -83,7 +83,7 @@ export default function EnquiryForm() {
           placeholder="Product, quantity, specifications or other details (Grade, thickness and size available on request)..."
         />
       </label>
-      <button className="button button-primary" type="submit">
+      <button className="button button-copper" type="submit">
         Submit enquiry <span>↗</span>
       </button>
       {status && <p className="form-status" role="status">{status}</p>}

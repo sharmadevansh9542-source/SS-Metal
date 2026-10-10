@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import siteConfig from "../data/siteConfig";
 import { productMenu } from "../data/products";
 import { MenuIcon } from "./Icons";
+import SmiLogo from "./SmiLogo";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,7 +44,6 @@ export default function Header() {
   const updateOverflow = useCallback(() => {
     if (dropdownRef.current) {
       const rect = dropdownRef.current.getBoundingClientRect();
-      // Level 1 panel width is ~240px, flyout is ~250px
       const totalWidthNeeded = rect.left + 240 + 250;
       if (totalWidthNeeded > window.innerWidth - 16) {
         setOpenLeft(true);
@@ -65,7 +65,6 @@ export default function Header() {
     setMobileOpenGroup(null);
   };
 
-  // Hover handlers with 150ms delay to prevent flicker between panels
   const handleDropdownMouseEnter = () => {
     if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current);
     updateOverflow();
@@ -108,7 +107,6 @@ export default function Header() {
     }, 150);
   };
 
-  // Keyboard navigation
   const handleTriggerKeyDown = (e) => {
     if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -182,29 +180,49 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="topline">
-        <div className="container topline-inner">
-          <span>Manufacturer of stainless steelware & unfinished products</span>
-          <div className="topline-contact">
-            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-            <span>•</span>
-            <a href={`tel:${siteConfig.phone.replaceAll(" ", "")}`}>{siteConfig.phone}</a>
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="container top-bar-inner">
+          <div className="top-contacts">
+            <span className="top-item">
+              <svg className="top-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <a href="tel:+919412236335">+91 9412236335</a> / <a href="tel:+919458771652">9458771652</a>
+            </span>
+            <span className="top-item">
+              <svg className="top-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <a href="mailto:SSmetal1965@gmail.com">SSmetal1965@gmail.com</a>
+            </span>
+            <span className="top-item top-item-address">
+              <svg className="top-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+              </svg>
+              Bypass Road, Manoharpur, Moradabad, UP
+            </span>
+          </div>
+          <div className="top-actions">
+            <Link href="/products" className="badge-stock-alert">
+              <span>⚡</span> Live Ready Stock Available
+            </Link>
+            <Link href="/contact" className="top-item top-pdf-btn">
+              <svg className="top-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+              Download PDF
+            </Link>
           </div>
         </div>
       </div>
-      <div className="container nav-wrap">
-        <Link className="brand" href="/" aria-label={`${siteConfig.brand} home`} onClick={closeAll}>
-          <span className="brand-mark"><span>SS</span></span>
-          <span className="brand-copy"><strong>SS Metal</strong><small>INDUSTRIES</small></span>
+
+      {/* Main Header Bar */}
+      <div className="container header-inner">
+        <Link className="brand-logo-link" href="/" aria-label="SS Metal Industries Home" onClick={closeAll}>
+          <SmiLogo />
         </Link>
-        <button
-          className="mobile-menu-button"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <MenuIcon open={menuOpen}/>
-        </button>
+
         <nav className={`main-nav ${menuOpen ? "is-open" : ""}`} aria-label="Main navigation">
           <div className="nav-links">
             {siteConfig.navigation.map(item => {
@@ -387,7 +405,7 @@ export default function Header() {
             const isActive = pathname === item.href;
             return (
               <Link
-                className={`nav-link ${isActive ? "is-active" : ""}`}
+                className={`nav-link ${isActive ? "is-active active" : ""}`}
                 key={item.href}
                 href={item.href}
                 onClick={closeAll}
@@ -397,10 +415,36 @@ export default function Header() {
             );
           })}
           </div>
-          <Link className="nav-enquiry" href="/contact" onClick={closeAll}>
-            Send Enquiry <span>↗</span>
-          </Link>
         </nav>
+
+        <div className="header-cta-group">
+          <a
+            href="https://wa.me/919412236335?text=Hello%20SS%20Metal%20Industries%2C%20I%20want%20to%20inquire%20about%20your%20products"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-whatsapp header-whatsapp"
+            aria-label="Chat on WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82-1.55 1.55-3.62 2.42-5.82 2.42-1.46 0-2.88-.39-4.14-1.14l-.3-.18-3.08.81.82-3-.19-.31a8.21 8.21 0 01-1.27-4.42c0-4.54 3.7-8.24 8.24-8.24z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+          <Link href="/contact" className="btn btn-primary header-quote" onClick={closeAll}>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span>Get Quote</span>
+          </Link>
+          <button
+            className="mobile-menu-button"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <MenuIcon open={menuOpen}/>
+          </button>
+        </div>
       </div>
     </header>
   );

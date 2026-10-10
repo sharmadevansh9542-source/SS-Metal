@@ -21,7 +21,7 @@ export default function AboutPage() {
           </div>
           <div className="rich-copy">
             <p className="body-large">
-              SS Metal Industries is publicly described as a stainless steelware manufacturer serving kitchenware, cookware, bath accessories, barware and unfinished product categories.
+              SS Metal Industries is a leading stainless steel manufacturer and stockiest supplying raw material coils, sheets, in-house circles, blanks, utensils, and trade cutting products.
             </p>
             <p>
               The business profile references a history dating to {siteConfig.founded} and a base in Manoharpur, Moradabad, Uttar Pradesh. This demo site presents those broad themes in a configurable format; detailed company claims and product specifications should be confirmed directly before publishing.

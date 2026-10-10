@@ -10,7 +10,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Product catalogue"
         title="Our Products"
-        description="Explore stainless steelware categories for kitchen, hospitality, utility and bulk manufacturing enquiries."
+        description="Explore stainless steel categories for raw materials, in-house manufacturing, and cut-to-size trade enquiries."
       />
       <section className="section-pad">
         <div className="container">

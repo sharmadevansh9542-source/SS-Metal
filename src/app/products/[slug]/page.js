@@ -62,7 +62,7 @@ export default function ProductDetailPage({ params }) {
             <p>
               Have custom specifications or bulk wholesale requirements? Grade, thickness and size available on request. Contact our manufacturing team directly.
             </p>
-            <Link className="button button-primary" href={`/contact?group=${encodeURIComponent(group.title)}`}>
+            <Link className="button button-copper" href={`/contact?group=${encodeURIComponent(group.title)}`}>
               Send an enquiry <ArrowRight />
             </Link>
           </div>
@@ -122,7 +122,7 @@ export default function ProductDetailPage({ params }) {
               Availability, dimensions, material grade, finish and order quantity must be confirmed directly for each item. Grade, thickness and size available on request.
             </p>
             <Link
-              className="button button-primary"
+              className="button button-copper"
               href={`/contact?product=${encodeURIComponent(product.title)}`}
             >
               Enquire about this range <ArrowRight />

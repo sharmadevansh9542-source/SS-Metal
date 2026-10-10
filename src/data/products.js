@@ -6,19 +6,6 @@ export const productMenu = [
     items: []
   },
   {
-    title: "Finished Products",
-    slug: "finished-products",
-    href: "/products/finished-products",
-    description: "Stainless steel kitchenware, cookware, barware, bath accessories and unfinished utensils for trade and distribution.",
-    items: [
-      { label: "Kitchenware", slug: "stainless-steel-kitchenware", href: "/products/stainless-steel-kitchenware" },
-      { label: "Cookware", slug: "cookware", href: "/products/cookware" },
-      { label: "Barware", slug: "barware", href: "/products/barware" },
-      { label: "Bath Accessories", slug: "bath-accessories", href: "/products/bath-accessories" },
-      { label: "Unfinished / Kalvat", slug: "unfinished-kalvat-utensils", href: "/products/unfinished-kalvat-utensils" }
-    ]
-  },
-  {
     title: "Raw Material",
     slug: "raw-material",
     href: "/products/raw-material",
@@ -55,61 +42,11 @@ export const productMenu = [
 
 const products = [
   {
-    slug: "stainless-steel-kitchenware",
-    title: "Stainless Steel Kitchenware",
-    short: "Everyday utility, carefully formed in stainless steel.",
-    description: "A broad range of practical stainless-steel kitchen products for distributors, wholesalers and commercial buyers. Product shapes, finishes and pack options can be configured for project requirements.",
-    image: "/images/kitchenware.svg",
-    eyebrow: "Kitchen essentials",
-    group: "Finished Products",
-    items: ["Mixing bowls", "Serving bowls", "Storage containers", "Utility vessels"]
-  },
-  {
-    slug: "cookware",
-    title: "Cookware",
-    short: "Durable forms for busy kitchens and food service.",
-    description: "Cookware concepts designed around useful forms, consistent finishing and dependable everyday performance. Confirm material grade, dimensions and compatibility before ordering.",
-    image: "/images/cookware.svg",
-    eyebrow: "Cookware range",
-    group: "Finished Products",
-    items: ["Cooking pots", "Saucepans", "Lids and covers", "Commercial kitchen vessels"]
-  },
-  {
-    slug: "barware",
-    title: "Barware",
-    short: "Polished pieces for hospitality, gifting and service.",
-    description: "A range of stainless-steel barware and hospitality pieces with clean silhouettes and polished finishes. Custom bulk enquiries are welcome.",
-    image: "/images/barware.svg",
-    eyebrow: "Hospitality",
-    group: "Finished Products",
-    items: ["Ice buckets", "Beer mugs", "Bar accessories", "Serving pieces"]
-  },
-  {
-    slug: "bath-accessories",
-    title: "Bath Accessories",
-    short: "Functional metal accessories with a clean finish.",
-    description: "Stainless-steel accessory concepts for bath and utility spaces. Ask the team about available designs, finish options and order quantities.",
-    image: "/images/bathware.svg",
-    eyebrow: "Bath & utility",
-    group: "Finished Products",
-    items: ["Bathroom containers", "Utility holders", "Small metal accessories", "Custom product enquiries"]
-  },
-  {
-    slug: "unfinished-kalvat-utensils",
-    title: "Unfinished / Kalvat Utensils",
-    short: "Manufacturing-ready forms for downstream finishing.",
-    description: "Unfinished stainless-steel utensils and Kalvat products for finishing, polishing and further processing. Specifications and dimensions must be confirmed for each requirement.",
-    image: "/images/kalvat.svg",
-    eyebrow: "Bulk manufacturing",
-    group: "Finished Products",
-    items: ["Unfinished vessels", "Bowls and containers", "Kalvat utensil forms", "Bulk product enquiries"]
-  },
-  {
     slug: "ss-coil",
     title: "SS Coil",
     short: "Precision-slit and full-width coils for industrial forming.",
     description: "High-grade stainless steel coils supplied for stamping, roll forming and deep drawing requirements. Grade, thickness and size available on request.",
-    image: "/images/ss-coil.svg",
+    image: "/images/ss-coil.jpg",
     eyebrow: "Raw Material",
     group: "Raw Material",
     items: ["Hot rolled & cold rolled coils", "Slit coils & custom widths", "Grade, thickness and size available on request", "Custom packaging & bulk supply"]
@@ -128,7 +65,7 @@ const products = [
     slug: "ss-circle",
     title: "SS Circle",
     short: "Precision-cut circles for spinning and utensil pressing.",
-    description: "Circles cut in-house with uniform edges and consistent material thickness, ideal for kitchenware drawing and vessel pressing. Grade, thickness and size available on request.",
+    description: "Circles cut in-house with uniform edges and consistent material thickness, ideal for utensil drawing and vessel pressing. Grade, thickness and size available on request.",
     image: "/images/ss-circle.svg",
     eyebrow: "In-house Manufacturing",
     group: "In-house Manufacturing",
@@ -139,7 +76,7 @@ const products = [
     title: "SS Blank",
     short: "Pre-cut blanks ready for press, stamp, and forming lines.",
     description: "Manufactured stainless steel blanks tailored for precise stamping and forming lines. Grade, thickness and size available on request.",
-    image: "/images/ss-blank.svg",
+    image: "/images/ss-blank.jpg",
     eyebrow: "In-house Manufacturing",
     group: "In-house Manufacturing",
     items: ["Press-ready shaped blanks", "Custom dimension tooling", "Grade, thickness and size available on request", "Batch manufacturing enquiries"]
@@ -189,7 +126,7 @@ const products = [
     title: "SS Pipe",
     short: "Welded and seamless stainless steel pipes and tubes.",
     description: "Durable stainless steel pipes for architectural railings, plumbing, exhaust and industrial piping systems. Grade, thickness and size available on request.",
-    image: "/images/ss-pipe.svg",
+    image: "/images/ss-pipe.jpg",
     eyebrow: "Trade & Cutting",
     group: "Trade & Cutting",
     items: ["Round & rectangular tubing", "Mirror & satin surface finishes", "Grade, thickness and size available on request", "Custom cut lengths"]
