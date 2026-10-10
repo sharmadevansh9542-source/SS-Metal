@@ -37,11 +37,20 @@ export default function ProductDetailPage({ params }) {
     return (
       <>
         <PageHero
-          eyebrow="PRODUCT RANGE"
+          eyebrow="PRODUCT RANGE • MORADABAD"
           title={group.title}
+          highlight="Precision Industrial Supply."
           description={group.description || "Precision stainless steel solutions crafted for trade and industrial manufacturing."}
           parent={{ label: "Products", href: "/products" }}
-          compact
+          primaryAction={{
+            label: "Check Ready Stock ⚡",
+            href: "/ready-stock"
+          }}
+          secondaryAction={{
+            label: "Request Custom Quote",
+            href: `/contact?group=${encodeURIComponent(group.title)}`
+          }}
+          note="Direct factory pricing & immediate dispatch from Moradabad"
         />
         <section className="section-pad">
           <div className="container">
@@ -99,6 +108,27 @@ export default function ProductDetailPage({ params }) {
   if (product.slug === "ss-utensils") {
     return (
       <>
+        <PageHero
+          eyebrow="IN-HOUSE MANUFACTURING • MORADABAD"
+          title="Unfinished Kalvat Products"
+          highlight="Utensil Blanks & Deep Drawn Forms."
+          description="Direct factory supply of unfinished stainless steel tapers, mugs, jugs, pots, cutlery holders, ice buckets, barware, and bathroom containers manufactured in Moradabad."
+          image={product.image}
+          parent={[
+            { label: "Products", href: "/products" },
+            { label: "In-house Manufacturing", href: "/products/in-house-manufacturing" }
+          ]}
+          primaryAction={{
+            label: "WhatsApp Factory Enquiries",
+            href: `https://wa.me/${siteConfig.whatsappNumber}?text=Hello%2C%20I%20am%20interested%20in%20Unfinished%20Kalvat%20products`
+          }}
+          secondaryAction={{
+            label: "Request Custom Mould / Farma",
+            href: "/contact"
+          }}
+          note="Over 24+ standard tooling dies ready for bulk stamping & production"
+        />
+
         {/* Unfinished Kalvat Products Catalogue Section (Matches Screenshot 1) */}
         <section className="kalvat-catalogue-page-wrapper section-pad">
           <div className="container">
@@ -165,14 +195,24 @@ export default function ProductDetailPage({ params }) {
   return (
     <>
       <PageHero
-        eyebrow={product.group.toUpperCase()}
+        eyebrow={`${product.group.toUpperCase()} • PRECISION SUPPLY`}
         title={product.title}
+        highlight="Engineered For Industry."
         description={product.short}
+        image={product.image}
         parent={[
           { label: "Products", href: "/products" },
           { label: parentGroup.title, href: parentGroup.href }
         ]}
-        compact
+        primaryAction={{
+          label: "Inquire This Product",
+          href: `/contact?product=${encodeURIComponent(product.title)}`
+        }}
+        secondaryAction={{
+          label: "Check Ready Stock ⚡",
+          href: "/ready-stock"
+        }}
+        note="Certified metallurgical standard & custom sizing available"
       />
       <section className="section-pad">
         <div className="container product-detail-grid">

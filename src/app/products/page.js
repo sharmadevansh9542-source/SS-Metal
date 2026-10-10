@@ -9,9 +9,20 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Product catalogue"
+        eyebrow="PRODUCT CATALOGUE • MORADABAD"
         title="Our Products"
-        description="Explore stainless steel categories for raw materials, in-house manufacturing, and cut-to-size trade enquiries."
+        highlight="Engineered For Industry."
+        description="Explore stainless steel categories across Raw Materials, In-House Manufacturing, and Trade & Cutting—available in customized grades, gauges, and dimensions."
+        image="/images/ss-coil.jpg"
+        primaryAction={{
+          label: "View Ready Stock ⚡",
+          href: "/ready-stock"
+        }}
+        secondaryAction={{
+          label: "Request Custom Quote",
+          href: "/contact"
+        }}
+        note="Custom sizing, slitting & cutting available on request • Bypass Road Plant"
       />
       <section className="section-pad">
         <div className="container">

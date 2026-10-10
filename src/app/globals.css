@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 :root {
     --navy: #0B2545;
     --navy-steel: #1F3A5F;
@@ -20,8 +19,10 @@
     --white: #fff;
     --max: 1200px;
     --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
-    --font-sans: "DM Sans", Arial, sans-serif;
+    --font-heading: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: var(--font-dm-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
 
 
 /* Base reset */
@@ -892,15 +893,22 @@ p {
    HOME HERO
 ============================================================ */
 
-.home-hero {
+.home-hero,
+.page-hero.home-style-hero {
     position: relative;
     background: var(--navy);
     color: #fff;
-    min-height: 450px;
-    height: clamp(450px, 52vh, 500px);
+    min-height: 440px;
+    height: clamp(440px, 50vh, 520px);
     overflow: hidden;
     display: flex;
     align-items: center;
+    padding: 30px 0;
+}
+
+.page-hero.home-style-hero.page-hero-compact {
+    min-height: 390px;
+    height: clamp(390px, 44vh, 460px);
     padding: 24px 0;
 }
 
@@ -910,6 +918,12 @@ p {
     background-image: linear-gradient(90deg, #071d36 0%, rgba(7, 29, 54, 0.96) 34%, rgba(10, 37, 69, 0.75) 56%, rgba(10, 37, 69, 0.18) 100%), url('/images/ss-coil.jpg');
     background-size: cover;
     background-position: right center;
+    transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-hero:hover .hero-image-layer,
+.page-hero.home-style-hero:hover .hero-image-layer {
+    transform: scale(1.03);
 }
 
 .hero-image-layer::after {
@@ -917,75 +931,142 @@ p {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 22% 35%, rgba(33, 128, 166, 0.2), transparent 28%),
-        linear-gradient(112deg, rgba(242, 140, 40, 0.12), transparent 38%);
+        radial-gradient(circle at 22% 35%, rgba(33, 128, 166, 0.22), transparent 30%),
+        linear-gradient(112deg, rgba(242, 140, 40, 0.14), transparent 40%);
     pointer-events: none;
 }
 
-.home-hero:after {
+.home-hero:after,
+.page-hero.home-style-hero:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     width: 6px;
-    background: var(--accent);
+    background: linear-gradient(180deg, var(--accent) 0%, #ffaa5b 50%, var(--accent-dark) 100%);
+    box-shadow: 2px 0 16px rgba(242, 140, 40, 0.5);
+    z-index: 4;
 }
 
-.home-hero-inner {
+.home-hero-inner,
+.page-hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .hero-copy {
-    max-width: 540px;
+    max-width: 580px;
     padding: 0;
     position: relative;
     z-index: 2;
 }
 
-.hero-copy h1 {
-    font-size: clamp(2.4rem, 4.25vw, 3.55rem);
-    line-height: 1.06;
-    margin: 0 0 14px;
-    color: #fff;
+/* Glassmorphism breadcrumbs badge for subpages */
+.hero-breadcrumb-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #e2e8f0;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-.hero-copy h1 em {
+.hero-breadcrumb-badge a {
+    color: rgba(255, 255, 255, 0.82);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.hero-breadcrumb-badge a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(242, 140, 40, 0.4);
+}
+
+.hero-breadcrumb-badge .hbb-sep {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 11px;
+}
+
+.hero-breadcrumb-badge .hbb-current {
+    color: #ffaa5b;
+    font-weight: 600;
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-copy h1,
+.hero-copy .hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.35rem, 4.2vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin: 0 0 14px;
+    color: #ffffff;
+    letter-spacing: -0.015em;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.hero-copy h1 em,
+.hero-copy .hero-title em {
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0;
     color: var(--accent);
-    background: linear-gradient(90deg, #F28C28, #E07A1E 60%, #C46210);
+    background: linear-gradient(90deg, #F28C28 0%, #ffaa5b 50%, #E07A1E 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .hero-lead {
-    font-size: 14px;
-    line-height: 1.7;
-    max-width: 470px;
-    color: #d3dee9;
-    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.72;
+    max-width: 520px;
+    color: #cbd5e1;
+    margin-bottom: 22px;
 }
 
 .hero-actions {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-actions .button {
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-actions .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hero-note {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-top: 22px;
-    font-size: 11px;
+    margin-top: 24px;
+    font-size: 11.5px;
     line-height: 1.5;
     color: var(--steel);
 }
@@ -993,16 +1074,17 @@ p {
 .hero-note strong {
     font-family: var(--font-serif);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14.5px;
     color: #fff;
     letter-spacing: 0.02em;
 }
 
 .hero-note-line {
     width: 36px;
-    height: 1px;
-    background: var(--accent);
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
 }
+
 
 
 /* ============================================================

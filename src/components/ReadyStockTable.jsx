@@ -28,7 +28,7 @@ export default function ReadyStockTable({ showHeader = true, compact = false }) 
     <div className="ready-stock-container">
       {showHeader && (
         <div className="ready-stock-header-block">
-          <h1 className="ready-stock-main-heading">Raw material</h1>
+          <h2 className="ready-stock-main-heading">Raw material</h2>
           <p className="ready-stock-main-description">
             Stainless steel circles, sheets, patta, patti and coil in JSLU, J4, 304, 316, 410 and 430 grades.
           </p>

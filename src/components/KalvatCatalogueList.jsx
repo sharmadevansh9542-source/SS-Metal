@@ -26,7 +26,7 @@ export default function KalvatCatalogueList({ showHeader = true }) {
     <div className="kalvat-catalogue-container">
       {showHeader && (
         <div className="kalvat-catalogue-header">
-          <h1 className="kalvat-catalogue-main-title">Products catalogue</h1>
+          <h2 className="kalvat-catalogue-main-title">Products catalogue</h2>
           <p className="kalvat-catalogue-main-desc">
             Unfinished Kalvat utensils, barware, bathware and kitchenware. Ask for custom sizes and weights.
           </p>

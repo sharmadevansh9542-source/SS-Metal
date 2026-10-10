@@ -14,7 +14,18 @@ export default function AboutPage() {
       <PageHero
         eyebrow="ESTABLISHED 1980 • MORADABAD"
         title="About SS Metal Industries"
-        description="Four decades of trusted excellence in stainless steel raw materials, in-house circle blanking, kalvat utensils, and industrial metal supplies."
+        highlight="Four Decades Of Metal Craftsmanship."
+        description="Four decades of trusted excellence in stainless steel raw materials, in-house circle blanking, kalvat utensils, and industrial metal supplies across India."
+        image="/images/company-headquarters.jpg"
+        primaryAction={{
+          label: "Explore Our Products",
+          href: "/products"
+        }}
+        secondaryAction={{
+          label: "View Ready Stock ⚡",
+          href: "/ready-stock"
+        }}
+        note="Manufacturing Plant & Head Office • Bypass Road, Moradabad"
       />
 
       {/* Main Company Story Section */}
