@@ -4,6 +4,41 @@ import ProductCard from "../components/ProductCard";
 import { ArrowRight } from "../components/Icons";
 import siteConfig from "../data/siteConfig";
 
+const featuredCategories = [
+  {
+    name: "Kitchenware",
+    slug: "stainless-steel-kitchenware",
+    href: "/products/stainless-steel-kitchenware",
+    image: "/images/kitchenware.svg",
+    eyebrow: "Kitchen essentials",
+    description: "Everyday utility, carefully formed in stainless steel."
+  },
+  {
+    name: "Cookware",
+    slug: "cookware",
+    href: "/products/cookware",
+    image: "/images/cookware.svg",
+    eyebrow: "Cookware range",
+    description: "Durable forms for busy kitchens and food service."
+  },
+  {
+    name: "Barware",
+    slug: "barware",
+    href: "/products/barware",
+    image: "/images/barware.svg",
+    eyebrow: "Hospitality",
+    description: "Polished pieces for hospitality, gifting and service."
+  },
+  {
+    name: "Unfinished Products",
+    slug: "unfinished-kalvat-utensils",
+    href: "/products/unfinished-kalvat-utensils",
+    image: "/images/kalvat.svg",
+    eyebrow: "Bulk manufacturing",
+    description: "Manufacturing-ready forms for downstream finishing."
+  }
+];
+
 export default function HomePage() {
   return (
     <>
@@ -37,24 +72,45 @@ export default function HomePage() {
               </span>
             </div>
           </div>
-          <div className="hero-stamp">
-            <span>SS-M</span>
-            <small>
-              STAINLESS<br />STEELWARE
-            </small>
-            <i></i>
-          </div>
         </div>
-        <div className="hero-bottom-bar">
-          <div className="container hero-bottom-inner">
-            <span>Kitchenware</span>
-            <b>×</b>
-            <span>Cookware</span>
-            <b>×</b>
-            <span>Barware</span>
-            <b>×</b>
-            <span>Unfinished products</span>
-            <span className="hero-bottom-caption">Built for business</span>
+      </section>
+
+      <section className="featured-categories-section">
+        <div className="container">
+          <div className="featured-categories-header">
+            <div>
+              <p className="eyebrow">Product Categories</p>
+              <h2>
+                Crafted for <em>industry & trade.</em>
+              </h2>
+            </div>
+            <Link className="text-link" href="/products">
+              Explore all categories <ArrowRight />
+            </Link>
+          </div>
+          <div className="featured-categories-grid">
+            {featuredCategories.map((cat, idx) => (
+              <article key={cat.slug} className="featured-category-card">
+                <Link
+                  className="featured-category-visual"
+                  href={cat.href}
+                  aria-label={`View ${cat.name}`}
+                >
+                  <span className="featured-category-num">0{idx + 1}</span>
+                  <img src={cat.image} alt={`${cat.name} illustration`} />
+                </Link>
+                <div className="featured-category-body">
+                  <span className="featured-category-eyebrow">{cat.eyebrow}</span>
+                  <h3 className="featured-category-title">
+                    <Link href={cat.href}>{cat.name}</Link>
+                  </h3>
+                  <p className="featured-category-desc">{cat.description}</p>
+                  <Link className="featured-category-link" href={cat.href}>
+                    Explore Products <ArrowRight />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -214,7 +270,7 @@ export default function HomePage() {
               {siteConfig.phone} ↗
             </a>
           </div>
-          <div className="cta-outline">S M I</div>
+          <div className="cta-outline">SS METAL</div>
         </div>
       </section>
     </>

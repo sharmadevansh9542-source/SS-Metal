@@ -194,7 +194,7 @@ export default function Header() {
       </div>
       <div className="container nav-wrap">
         <Link className="brand" href="/" aria-label={`${siteConfig.brand} home`} onClick={closeAll}>
-          <span className="brand-mark"><span>SM</span></span>
+          <span className="brand-mark"><span>SS</span></span>
           <span className="brand-copy"><strong>SS Metal</strong><small>INDUSTRIES</small></span>
         </Link>
         <button
@@ -206,7 +206,8 @@ export default function Header() {
           <MenuIcon open={menuOpen}/>
         </button>
         <nav className={`main-nav ${menuOpen ? "is-open" : ""}`} aria-label="Main navigation">
-          {siteConfig.navigation.map(item => {
+          <div className="nav-links">
+            {siteConfig.navigation.map(item => {
             if (item.label === "Products") {
               return (
                 <div
@@ -395,6 +396,7 @@ export default function Header() {
               </Link>
             );
           })}
+          </div>
           <Link className="nav-enquiry" href="/contact" onClick={closeAll}>
             Send Enquiry <span>↗</span>
           </Link>

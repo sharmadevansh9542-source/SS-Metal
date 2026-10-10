@@ -6,7 +6,7 @@ const siteConfig = {
     description: "Stainless steel kitchenware, cookware, barware, bath accessories and unfinished metal products for trade and manufacturing partners.",
     phone: "+91 94587 71652",
     secondaryPhone: "+91 63979 92907",
-    email: "info@sagarmetalindustries.com",
+    email: "info@ssmetalindustries.com",
     address: "Bypass Road, Manoharpur, Moradabad, Uttar Pradesh 244001, India",
     founded: "1980",
     whatsappNumber: "919458771652",

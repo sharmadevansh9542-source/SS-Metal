@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-main">
         <div className="footer-about">
           <Link className="brand brand-footer" href="/">
-            <span className="brand-mark"><span>SM</span></span>
+            <span className="brand-mark"><span>SS</span></span>
             <span className="brand-copy"><strong>SS Metal</strong><small>INDUSTRIES</small></span>
           </Link>
           <p>
