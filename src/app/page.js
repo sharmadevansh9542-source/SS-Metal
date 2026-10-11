@@ -274,46 +274,6 @@ export default function HomePage() {
       {/* Live Stats */}
       <StatsSection />
 
-      {/* Executive Leadership / Management Team */}
-      <section className="section-team">
-        <div className="container">
-          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }} data-aos="fade-up">
-            <span className="section-kicker">Executive Leadership</span>
-            <h2 className="section-title">Management Team</h2>
-            <div className="title-divider center"></div>
-            <p style={{ color: "#64748b", fontSize: "1.05rem" }}>
-              Meet our visionary leadership driving quality, continuous innovation, and trusted customer relationships worldwide.
-            </p>
-          </div>
-
-          <div className="team-grid">
-            <div className="team-card" data-aos="fade-up" data-aos-delay="150">
-              <div className="team-avatar">SB</div>
-              <div className="team-info">
-                <h3>Mr. Pradeep Kumar Agarwal</h3>
-                <p className="team-role">Managing Director</p>
-                <div className="team-phone">
-                  <span>📞</span>
-                  <a href="tel:+919412236335">+91 9412236335</a> • <a href="tel:+919458771652">+91 9458771652</a>
-                </div>
-              </div>
-            </div>
-
-            {/* <div className="team-card">
-              <div className="team-avatar">SB</div>
-              <div className="team-info">
-                <h3>Shourya Bansal</h3>
-                <p className="team-role">Managing Director</p>
-                <div className="team-phone">
-                  <span>📞</span>
-                  <a href="tel:+919458771652">+91 9458771652</a> • <a href="tel:+917454874050">+91 74548 74050</a>
-                </div>
-              </div>
-            </div>*/}
-          </div>
-        </div>
-      </section>
-
       {/* Manufacturing Infrastructure Preview */}
       <section style={{ padding: "80px 0", background: "#f8fafc" }}>
         <div className="container">
