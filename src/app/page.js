@@ -2,6 +2,7 @@ import Link from "next/link";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
 import PopularKalvatSection from "../components/PopularKalvatSection";
+import StatsSection from "../components/StatsSection";
 import { ArrowRight } from "../components/Icons";
 import siteConfig from "../data/siteConfig";
 
@@ -271,32 +272,7 @@ export default function HomePage() {
       </section>
 
       {/* Live Stats */}
-      <section className="section-stats">
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-item" data-aos="fade-up" data-aos-delay="100">
-              <div className="stat-num">50+</div>
-              <div className="stat-divider"></div>
-              <div className="stat-label">Exporters Clients</div>
-            </div>
-            <div className="stat-item" data-aos="fade-up" data-aos-delay="200">
-              <div className="stat-num">100+</div>
-              <div className="stat-divider"></div>
-              <div className="stat-label">Satisfied OEM Brands</div>
-            </div>
-            <div className="stat-item" data-aos="fade-up" data-aos-delay="300">
-              <div className="stat-num">35000+</div>
-              <div className="stat-divider"></div>
-              <div className="stat-label">Products Per Day</div>
-            </div>
-            <div className="stat-item" data-aos="fade-up" data-aos-delay="400">
-              <div className="stat-num">200+</div>
-              <div className="stat-divider"></div>
-              <div className="stat-label">Skilled Worker Team</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StatsSection />
 
       {/* Executive Leadership / Management Team */}
       <section className="section-team">

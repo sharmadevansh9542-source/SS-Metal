@@ -2120,12 +2120,13 @@ p {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
     text-align: center;
 }
 
 .stat-item {
+    min-width: 0;
     padding: 20px 10px;
 }
 
@@ -2150,6 +2151,30 @@ p {
     font-size: 0.95rem;
     color: #cbd5e1;
     font-weight: 600;
+    line-height: 1.45;
+}
+
+@media (max-width: 850px) {
+    .section-stats {
+        padding: 42px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 20px;
+    }
+
+    .stat-item {
+        padding: 12px 4px;
+    }
+
+    .stat-num {
+        font-size: clamp(2.15rem, 8vw, 3rem);
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
 }
 
 
